@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confiteria Digital Adso</title>
+    <title>Confitería Adso</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
+
 <body>
-    
+
+    <header>
+
+        <div class="derecha">
+
+            <div class="logo">
+                <img class="logo-img" src="./assets/logo sin fondo.png" alt="logo">
+            </div>
+            <hr>
+            <nav>
+                <ul>
+                    <li><a href="#">Pedidos</a></li>
+                    <li><a href="#">Preferencial</a></li>
+                    <li><a href="#">Quienes Somos</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="derecha">
+            <a href="#" class="carrito">
+                <img class="carrito-img" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="">
+            </a>
+            <a href="#" class="sesion">Iniciar Sesión</a>
+            <a href="#" class="registro">Registro</a>
+
+
+        </div>
+
+    </header>
+    <section class="categoria">
+
+        <a href="#" class="btn-categoria dulceria">Dulceria</a>
+        <a href="#" class="btn-categoria regal">Regalos</a>
+    </section>
+
+    <section class="banner">
+
+        <img class="banner-img" src="./assets/dulceria/banner 1 - copia.png" alt="banner">
+
+
+    </section>
+
+    <hr>
+    <section class="vitrina-productos">
+        <aside class="filtrado">
+            <h3>Filtro</h3>
+            <input type="text" class="filtro-busqueda" id="" placeholder="Buscar...">
+            <hr>
+            <div class="filtro-grupo">
+                <h4>Categoría</h4>
+                <div class="filtro-items">
+                    <input type="checkbox" id="cat1">
+                    <label for="cat1">Colombina</label>
+                </div>
+                <div class="filtro-items">
+                    <input type="checkbox" id="cat2">
+                    <label for="cat2">jet</label>
+                </div>
+                <div class="filtro-items">
+                    <input type="checkbox" id="cat3">
+                    <label for="cat3">yupi</label>
+                </div>
+                <div class="filtro-items">
+                    <input type="checkbox" id="cat4">
+                    <label for="cat4">ferrero rocher</label>
+                </div>
+            </div>
+            <div class="filtro-grupo">
+                <hr>
+                <h4>Marca</h4>
+                <div class="filtro-items">
+                    <input type="checkbox" id="marca1">
+                    <label for="marca1">Trululu</label>
+                </div>
+                <div class="filtro-items">
+                    <input type="checkbox" id="marca2">
+                    <label for="marca2">Magnum</label>
+                </div>
+                <div class="filtro-items">
+                    <input type="checkbox" id="marca3">
+                    <label for="marca3">Fini</label>
+                </div>
+            </div>
+            <div class="filtro-grupo">
+                <hr>
+                <h4>Precio</h4>
+                <div class="filtro-precio">
+                    <span>Desde:</span>
+                    <input type="text" values="$ 2000">
+                </div>
+                <div class="filtro-precio">
+                    <span>Hasta:</span>
+                    <input type="text" values="$ 15000">
+                </div>
+            </div>
+        </aside>
+
+        <section class="productos">
+
+            <div class="card">
+                <img class="card-img" src="./assets/dulceria/descarga.png" alt="chocolate"
+                    style="width: 237px;height: 203px;">
+                <div class="items">
+                    <div class="top">
+                        <h3>Caja De Chocolate</h3>
+                        <p>$3.000</p>
+                    </div>
+                    <button class="agregar-carrito">
+                        <img class="icono" src="/assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="./assets/dulceria/trululu.png" alt="" style="width: 232px;height: 202px;">
+                <div class="items">
+                    <div class="top">
+                        <h3>trululu</h3>
+                        <p>$5.000</p>
+                    </div>
+                    <button class="agregar-carrito">
+                        <img class="icono" src="/assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="./assets/dulceria/paleta.png" alt="" style="width: 212px;height: 203px;">
+                <div class="items">
+                    <div class="top">
+                        <h3>paleta</h3>
+                        <p>$16.000</p>
+                    </div>
+                    <button class="agregar-carrito">
+                        <img class="icono" src="/assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="./assets/dulceria/bombones.png" alt="" style="width: 198px;height: 198px;">
+                <div class="items">
+                    <div class="top">
+                        <h3>Bombones</h3>
+                        <p>$4.000</p>
+                    </div>
+                    <button class="agregar-carrito">
+                        <img class="icono" src="/assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="./assets/dulceria/bubalu.png" alt="" style="width: 237px;height: 204px;">
+                <div class="items">
+                    <div class="top">
+                        <h3>Bubalu</h3>
+                        <p>$1.000</p>
+                    </div>
+                    <button class="agregar-carrito">
+                        <img class="icono" src="/assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="./assets/dulceria/chocoramo.png" alt="" style="width: 250px;height: 242px;">
+                <div class="items">
+                    <div class="top">
+                        <h3>Chocoramo</h3>
+                        <p>$5.000</p>
+                    </div>
+                    <button class="agregar-carrito">
+                        <img class="icono" src="/assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="videos">
+        <div class="videos-producto">
+            <div class="tarjeta-videos">    
+                <video width="100%" height="100%" controls>
+                    <source src="./assets/dulceria/bombones.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+        </div>
+    </section>
 </body>
+
 </html>
