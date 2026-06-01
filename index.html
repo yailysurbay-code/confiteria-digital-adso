@@ -55,57 +55,100 @@
     <hr>
     <section class="vitrina-productos">
         <aside class="filtrado">
-            <h3>Filtro</h3>
-            <input type="text" class="filtro-busqueda" id="" placeholder="Buscar...">
-            <hr>
-            <div class="filtro-grupo">
-                <h4>Categoría</h4>
-                <div class="filtro-items">
-                    <input type="checkbox" id="cat1">
-                    <label for="cat1">Colombina</label>
-                </div>
-                <div class="filtro-items">
-                    <input type="checkbox" id="cat2">
-                    <label for="cat2">jet</label>
-                </div>
-                <div class="filtro-items">
-                    <input type="checkbox" id="cat3">
-                    <label for="cat3">yupi</label>
-                </div>
-                <div class="filtro-items">
-                    <input type="checkbox" id="cat4">
-                    <label for="cat4">ferrero rocher</label>
-                </div>
+    
+    <div class="seccion-filtro">
+        <div class="encabezado-filtro">
+            <h3>Marca</h3>
+            <span class="icono-flecha">&#x2304;</span>
+        </div>
+        
+        <div class="caja-busqueda">
+            <input type="text" placeholder="Ingrese una marca">
+            <span class="icono-buscar">&#x1F50D;</span>
+        </div>
+
+        <ul class="lista-filtros">
+            <li>
+                <label class="contenedor-radio">
+                    <input type="radio" name="filtro-marca" checked>
+                    <span class="punto-color punto-todas"></span>
+                    <span class="texto-etiqueta">Todas las marcas <span class="contador">(7)</span></span>
+                </label>
+            </li>
+            <li>
+                <label class="contenedor-radio">
+                    <input type="radio" name="filtro-marca">
+                    <span class="punto-color punto-colombina"></span>
+                    <span class="texto-etiqueta">Colombina <span class="contador">(6)</span></span>
+                </label>
+            </li>
+            <li>
+                <label class="contenedor-radio">
+                    <input type="radio" name="filtro-marca">
+                    <span class="punto-color punto-jet"></span>
+                    <span class="texto-etiqueta">Jet <span class="contador">(1)</span></span>
+                </label>
+            </li>
+            <li>
+                <label class="contenedor-radio deshabilitado">
+                    <input type="radio" name="filtro-marca" disabled>
+                    <span class="punto-color punto-yupis"></span>
+                    <span class="texto-etiqueta">Yupis <span class="contador">(0)</span></span>
+                </label>
+            </li>
+            <li>
+                <label class="contenedor-radio deshabilitado">
+                    <input type="radio" name="filtro-marca" disabled>
+                    <span class="punto-color punto-ferrero"></span>
+                    <span class="texto-etiqueta">Ferrero Rocher <span class="contador">(0)</span></span>
+                </label>
+            </li>
+            <li>
+                <label class="contenedor-radio deshabilitado">
+                    <input type="radio" name="filtro-marca" disabled>
+                    <span class="punto-color punto-ramo"></span>
+                    <span class="texto-etiqueta">Ramo <span class="contador">(0)</span></span>
+                </label>
+            </li>
+        </ul>
+        <a href="#" class="ver-mas">Ver más</a>
+    </div>
+
+    <hr class="linea-divisoria">
+
+    <div class="seccion-filtro">
+        <div class="encabezado-filtro">
+            <h3>Precio</h3>
+            <span class="icono-flecha">&#x2304;</span>
+        </div>
+        <div class="contenedor-rango tema-verde">
+            <input type="range" min="100" max="1000" value="500" class="deslizador">
+            <div class="etiquetas-rango">
+                <span>$100</span>
+                <span class="valor-actual">$500</span>
+                <span>$1000</span>
             </div>
-            <div class="filtro-grupo">
-                <hr>
-                <h4>Marca</h4>
-                <div class="filtro-items">
-                    <input type="checkbox" id="marca1">
-                    <label for="marca1">Trululu</label>
-                </div>
-                <div class="filtro-items">
-                    <input type="checkbox" id="marca2">
-                    <label for="marca2">Magnum</label>
-                </div>
-                <div class="filtro-items">
-                    <input type="checkbox" id="marca3">
-                    <label for="marca3">Fini</label>
-                </div>
+        </div>
+    </div>
+
+    <hr class="linea-divisoria">
+
+    <div class="seccion-filtro">
+        <div class="encabezado-filtro">
+            <h3>Cantidad</h3>
+            <span class="icono-flecha">&#x2304;</span>
+        </div>
+        <div class="contenedor-rango tema-naranja">
+            <input type="range" min="1" max="10" value="5" class="deslizador">
+            <div class="etiquetas-rango">
+                <span>1</span>
+                <span class="valor-actual">5</span>
+                <span>10</span>
             </div>
-            <div class="filtro-grupo">
-                <hr>
-                <h4>Precio</h4>
-                <div class="filtro-precio">
-                    <span>Desde:</span>
-                    <input type="text" values="$ 2000">
-                </div>
-                <div class="filtro-precio">
-                    <span>Hasta:</span>
-                    <input type="text" values="$ 15000">
-                </div>
-            </div>
-        </aside>
+        </div>
+    </div>
+
+</aside>
 
         <section class="productos">
 
@@ -199,6 +242,106 @@
             
         </div>
     </section>
+    <section>
+        <div class="imagenes-de-video">
+            <img class="img-video" src="./assets/dulceria/imagen bombon.jpeg" alt="" style="width: 360px; height: 200px;">  
+            <img class="img-video" src="./assets/dulceria/imagen gomita.jpeg" alt="" style="width: 360px; height: 200px;">  
+            <img class="img-video" src="./assets/dulceria/imagen paleta.jpeg" alt="" style="width: 360px; height: 200px;">  
+        </div>
+    </section>
+    <section>
+        <div class="product-container">
+            <div class="product-item">
+                <img src="./assets/dulceria/super coco.png" alt="Supercoco" class="product-img">
+                <div class="product-details">
+                    <h2 class="product-title">Supercoco</h2>
+                    <p class="product-info">Sabor: Coco</p>
+                    <p class="product-info">Unidad: 22</p>
+                    <p class="product-info price-per-unit">Precio: $3.000 x und</p>
+                </div>
+                <div class="product-actions">
+                    <span class="product-price">$3.000</span>
+                    <button class="btn-buy">Comprar <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/dulceria/quipito.png" alt="Quipitos" class="product-img">
+                <div class="product-details">
+                    <h2 class="product-title">Quipitos</h2>
+                    <p class="product-info">Sabor: Vainilla</p>
+                    <p class="product-info">Unidad: 1</p>
+                    <p class="product-info price-per-unit">Precio: $500 x und</p>
+                </div>
+                <div class="product-actions">
+                    <span class="product-price">$500</span>
+                    <button class="btn-buy">Comprar <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/dulceria/frunas.png" alt="Frunas" class="product-img">
+                <div class="product-details">
+                    <h2 class="product-title">Frunas</h2>
+                    <p class="product-info">Sabor: Variado</p>
+                    <p class="product-info">Unidad: 4</p>
+                    <p class="product-info price-per-unit">Precio: $3.000 x und</p>
+                </div>
+                <div class="product-actions">
+                    <span class="product-price">$3.000</span>
+                    <button class="btn-buy">Comprar <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="./assets/dulceria/jet.png" alt="Chocolatina Jet" class="product-img">
+                <div class="product-details">
+                    <h2 class="product-title">Chocolatina Jet</h2>
+                    <p class="product-info">Sabor: Chocolate</p>
+                    <p class="product-info">Unidad: 1</p>
+                    <p class="product-info price-per-unit">Precio: $700 x und</p>
+                </div>
+                <div class="product-actions">
+                    <span class="product-price">$700</span>
+                    <button class="btn-buy">Comprar <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column footer-logo">
+            <img src="./assets/logo sin fondo.png" alt="ADSO Confitería & Dulcería Digital">
+        </div>
+        <div class="footer-column footer-map">
+            <img src="./assets/dulceria/image.png" alt="Mapa de ubicación">
+        </div>
+        <div class="footer-column footer-info">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#preferencial">Preferencial</a></li>
+                    <li><a href="#confiteria">Confitería</a></li>
+                    <li><a href="#regalos">Regalos</a></li>
+                    <li><a href="#quienes-somos">Quiénes somos</a></li>
+                </ul>
+            </nav>
+            <div class="footer-socials">
+                <a href="#" class="social-icon icon-facebook"><img src="./assets/dulceria/facebook.png" alt="Facebook"></a>
+                <a href="#" class="social-icon icon-instagram"><img src="./assets/dulceria/instagram.png" alt="Instagram"></a>
+                <a href="#" class="social-icon icon-x"><img src="./assets/dulceria/twitter.png" alt="X"></a>
+                <a href="#" class="social-icon icon-whatsapp"><img src="./assets/dulceria/whatsapp.png" alt="WhatsApp"></a>
+                <a href="#" class="social-icon icon-youtube"><img src="./assets/dulceria/youtube.png" alt="YouTube"></a>
+            </div>
+            <p class="footer-copyright">&copy; 2026. Todos los derechos reservados..</p>
+        </div>
+    </div>
+
+    <a href="#top" class="btn-scroll-top" aria-label="Volver arriba">
+        <span class="arrow-up">&uarr;</span>
+    </a>
+</footer>
 </body>
 
 </html>
