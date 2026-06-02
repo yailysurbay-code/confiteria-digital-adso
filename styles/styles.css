@@ -4,27 +4,33 @@
     box-sizing: border-box;
     font-family: 'Fira Sans', sans-serif;
 }
-
+/*estilos generales del body*/
 header {
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 96px;
-    margin: 0 40px;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    top: 0;
+    left: 0;
 }
-
+/*estilos para la parte derecha del header*/
 .derecha {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
+/*estilos para la linea divisoria en la parte derecha del header*/
 .derecha hr {
     height: 100px;
     border: 1px solid #ddd;
 }
-
+/*estilos para los enlaces en la parte derecha del header*/
 .derecha a {
     text-decoration: none;
     color: #1a1a1a;
@@ -34,7 +40,7 @@ header {
     display: flex;
     align-items: center;
 }
-
+/*estilos para el boton de registro*/
 .registro {
 
     background: #F93827;
@@ -42,41 +48,41 @@ header {
     padding: 10px 15px;
     border-radius: 5px;
 }
-
+/*estilos para la imagen del carrito de compras*/
 .derecha a .carrito-img {
     width: 40px;
     height: 40px;
 }
-
+/*estilos para el contenedor del logo*/
 .logo {
     width: 140px;
     height: 80px;
 }
-
+/*estilos para la imagen del logo*/
 .logo .logo-img {
     width: 100%;
     height: 100%;
 }
-
+/*estilos para el contenedor de navegacion*/
 nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
-
+/*estilos para los enlaces de navegacion*/
 nav a {
     text-decoration: none;
     color: #1a1a1a;
     font-weight: 400;
     font-size: 16px;
 }
-
+/*estilos para el contenedor de categorias*/
 .categoria {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-
+/*estilos para los botones de categoria*/
 .btn-categoria {
     flex: 1;
     text-align: center;
@@ -86,36 +92,36 @@ nav a {
     font-weight: bold;
     padding: 20px;
 }
-
+/*estilos para la categoria de regal*/
 .regal {
     font-family: 'Karla', sans-serif, bold;
     font-size: 32px;
     color: #16C47F;
 }
-
+/*estilos para la categoria de dulceria*/
 .dulceria {
     background: #F93827;
     font-family: 'Karla', sans-serif, bold;
     font-size: 32px;
 }
-
+/*estilos para el contenedor del banner*/
 .banner {
     text-align: center;
     width: 100%;
 }
-
+/*estilos para la imagen del banner*/
 .banner img {
     width: 100%;
     height: 410px;
     display: block;
     object-fit: cover;
 }
-
+/*estilos para el titulo del banner*/
 .banner h1 {
     color: #c2185b;
     margin-bottom: 10px;
 }
-
+/*estilos para la vitrina de productos y su contenedor principal*/
 .vitrina-productos {
     display: grid;
     grid-template-columns: 280px minmax(0, 1fr);
@@ -128,7 +134,7 @@ nav a {
     background: #fff;
     box-sizing: border-box;
 }
-
+/*estilos para la barra lateral de filtros y el contenedor de filtrado*/
 .barra-lateral-filtros,
 .filtrado {
     width: auto;
@@ -140,7 +146,7 @@ nav a {
     color: #333333;
     border-right: 1px solid #f0f0f0;
 }
-
+/*estilos responsivos para la vitrina de productos y barra lateral de filtros*/
 @media (max-width: 980px) {
     .vitrina-productos {
         grid-template-columns: 1fr;
@@ -152,11 +158,11 @@ nav a {
         width: 100%;
     }
 }
-
+/*estilos para cada seccion de filtros en la barra lateral*/
 .seccion-filtro {
     margin-bottom: 15px;
 }
-
+/*estilos para el encabezado de cada seccion de filtros*/
 .encabezado-filtro {
     display: flex;
     justify-content: space-between;
@@ -164,23 +170,23 @@ nav a {
     margin-bottom: 15px;
     cursor: pointer;
 }
-
+/*estilos para el titulo de cada seccion de filtros*/
 .encabezado-filtro h3 {
     font-size: 1.15rem;
     font-weight: 700;
     color: #2d3748;
 }
-
+/*estilos para el icono de flecha en el encabezado de cada seccion de filtros*/
 .icono-flecha {
     font-size: 1.2rem;
     color: #4a5568;
 }
-
+/*estilos para el contenedor de cada seccion de filtros*/
 .caja-busqueda {
     position: relative;
     margin-bottom: 15px;
 }
-
+/*estilos para la caja de busqueda en cada seccion de filtros*/
 .caja-busqueda input {
     width: 100%;
     padding: 8px 35px 8px 12px;
@@ -191,11 +197,11 @@ nav a {
     color: #4a5568;
     outline: none;
 }
-
+/*estilos para el placeholder de la caja de busqueda*/
 .caja-busqueda ::placeholder {
     color: #a0aec0;
 }
-
+/*estilos para el icono de busqueda dentro de la caja de busqueda*/
 .icono-buscar {
     position: absolute;
     right: 12px;
@@ -204,17 +210,17 @@ nav a {
     color: #a0aec0;
     font-size: 0.85rem;
 }
-
+/*estilos para la lista de filtros en cada seccion de filtros*/
 .lista-filtros {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+/*estilos para cada item de filtro en la lista*/
 .lista-filtros li {
     margin-bottom: 12px;
 }
-
+/*contenedor de cada filtro con radio button, punto de color y texto*/
 .contenedor-radio {
     display: flex;
     align-items: center;
@@ -223,12 +229,12 @@ nav a {
     color: #2d3748;
     user-select: none;
 }
-
+/*ocultar los radio buttons originales*/
 .contenedor-radio input {
     display: none; 
 }
 
-
+/*estilos para el punto de color en cada filtro*/
 .punto-color {
     width: 14px;
     height: 14px;
@@ -237,35 +243,36 @@ nav a {
     display: inline-block;
     transition: transform 0.1s ease;
 }
-
+/*estilos de puntos de color para cada marca*/
 .punto-todas { background-color: #10b981; }
 .punto-colombina { background-color: #c4b5a4; }
 .punto-jet { background-color: #bcaba0; }
 .punto-yupis { background-color: #a3b8b0; }
 .punto-ferrero { background-color: #c4b6a5; }
 .punto-ramo { background-color: #cbb4b0; }
-
+/*estilos para el texto de cada filtro*/
 .texto-etiqueta {
     flex-grow: 1;
 }
-
+/*estilos para el contador de productos en cada filtro*/
 .contador {
     color: #a0aec0;
 }
-
+/*estilos para el punto de color cuando el filtro esta seleccionado*/
 .contenedor-radio input:checked + .punto-color {
     transform: scale(1.2);
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px currentColor;
 }
-
+/*estilos para el contenedor del filtro cuando esta deshabilitado*/
 .contenedor-radio.deshabilitado {
     color: #a0aec0;
     cursor: not-allowed;
 }
+/*estilos para el punto de color cuando el filtro esta deshabilitado*/
 .contenedor-radio.deshabilitado .punto-color {
     opacity: 0.6;
 }
-
+/*estilos para el enlace de ver mas en cada seccion de filtros*/
 .ver-mas {
     display: inline-block;
     font-size: 0.85rem;
@@ -273,7 +280,7 @@ nav a {
     text-decoration: underline;
     margin-top: 5px;
 }
-
+/*estilos para la linea divisoria entre secciones de filtros*/
 .linea-divisoria {
     border: 0;
     border-top: 1px solid #e2e8f0;
@@ -283,7 +290,7 @@ nav a {
 .contenedor-rango {
     padding: 10px 0;
 }
-
+/*estilos para el deslizador de rango de precio*/
 .deslizador {
     -webkit-appearance: none;
     appearance: none;
@@ -292,15 +299,15 @@ nav a {
     border-radius: 3px;
     outline: none;
 }
-
+/*estilos para el color del fondo del deslizador segun el tema*/
 .tema-verde .deslizador {
     background: linear-gradient(to right, #10b981 0%, #10b981 50%, #e2e8f0 50%, #e2e8f0 100%);
 }
-
+/*estilos para el color del fondo del deslizador segun el tema*/
 .tema-naranja .deslizador {
     background: linear-gradient(to right, #ff9f1c 0%, #ff9f1c 50%, #e2e8f0 50%, #e2e8f0 100%);
 }
-
+/*estilos para el thumb del deslizador*/
 .deslizador::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -310,10 +317,10 @@ nav a {
     cursor: pointer;
     border: none;
 }
-
+/*estilos para el color del thumb del deslizador segun el tema*/
 .tema-verde .deslizador::-webkit-slider-thumb { background-color: #10b981; }
 .tema-naranja .deslizador::-webkit-slider-thumb { background-color: #ff9f1c; }
-
+/*estilos para mostrar las etiquetas del rango de precio*/
 .etiquetas-rango {
     display: flex;
     justify-content: space-between;
@@ -321,14 +328,14 @@ nav a {
     font-size: 0.9rem;
     color: #cbd5e0;
 }
-
+/*estilos para mostrar el valor actual del rango de precio*/
 .etiquetas-rango .valor-actual {
     font-weight: bold;
 }
-
+/*estilos para mostrar el valor actual del rango de precio*/
 .tema-verde .valor-actual { color: #10b981; }
 .tema-naranja .valor-actual { color: #ff9f1c; }
-
+/*contenedor de productos en la vitrina*/
 .productos {
     flex: 1;
     min-width: 0;
@@ -339,7 +346,7 @@ nav a {
     padding: 0;
     grid-auto-rows: auto;
 }
-
+/*estilos de cada producto en la lista*/
 .card {
     border: 1px solid #ddd;
     padding: 15px;
@@ -348,32 +355,32 @@ nav a {
     background: #fff;
     box-sizing: border-box;
 }
-
+/*contenedor de informacion y boton de agregar al carrito en cada producto*/
 .card .items {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-family: 'inter', sans-serif;
 }
-
+/*contenedor del boton de agregar al carrito en cada producto*/
 .items .agregar-carrito {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/*estilos del icono de agregar al carrito en cada producto*/
 .items .agregar-carrito .icono {
     filter: brightness(0) invert(1);
     width: 32px;
     height: 32px;
 }
-
+/*contenedor de la parte superior de cada producto*/
 .top {
     display: flex;
     flex-direction: column;
     align-items: start;
 }
-
+/*estilos de imagen del producto en cada tarjeta*/
 .card .card-img {
     width: 100% !important;
     max-width: 100%;
@@ -381,34 +388,34 @@ nav a {
     object-fit: contain;
     margin-bottom: 15px;
 }
-
+/*contenedor del pie de cada producto*/
 .card-footer{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 10px;
 }
-
+/*contenedor de informacion del producto*/
 .card-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
+/*estilos del titulo del producto*/
 .card-title {
     font-size: 20px;
     color: #333;
     font-weight: normal;
     margin: 0;
 }
-
+/*estilos del precio del producto*/
 .card-price {
     font-size: 24px;
     font-weight: bold;
     color: #1a1a1a;
     margin: 0;
 }
-
+/*estilos del boton de agregar al carrito*/
 .card .agregar-carrito {
     background: #16C47F; 
     color: white;
@@ -422,38 +429,38 @@ nav a {
     align-items: center;
     transition: background 0.2s ease;
 }
-
+/*efecto hover en boton de agregar al carrito*/
 .card .agregar-carrito:hover {
     background: #12a369;
 }
-
+/*estilos del icono de agregar al carrito*/
 .card .agregar-carrito i {
     font-size: 20px;
 }
-
+/*estilos del contenedor de promocion*/
 .promo {
     width: 100%;
     padding: 20px;
 }
-
+/*estilos de imagenes de promocion*/
 .promo .promo-img {
     width: 100%;
     border-radius: 10px;
 }
-
+/*estilos del footer*/
 footer {
     background: #f2f2f2;
     text-align: center;
     padding: 20px;
     margin-top: 20px;
 }
-
+/*estilos de la linea divisoria*/
 hr {
     border: none;
     border: 1px solid #ce3d08;
     margin: 20px 0;
 }
-
+/*estilos del contenedor de videos de producto*/
 .videos-producto {
     display: flex;
     width: 100%;
@@ -461,7 +468,7 @@ hr {
     gap: 20px;
     padding: 20px 0;
 }
-
+/*estilos del contenedor de imagenes de video*/
 .imagenes-de-video {
 display: flex;
 flex-direction: row;
@@ -469,26 +476,28 @@ gap: 16px;
 padding: 20px 40px;
     
 }
+/*estilos de imagenes de video*/
 .img-video {
    flex: 1;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
 }
-
+/*estilos generales para todo el sitio*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/*estilos generales del body*/
 body {
     background-color: #f4f6f9;
     display: block;
-    padding: 40px 20px;
+    padding: 0;
+    margin: 0;
 }
-
+/*estilos del contenedor principal de productos*/
 .product-container {
     background-color: #ffffff;
     width: 100%;
@@ -498,45 +507,46 @@ body {
     padding: 10px 20px;
     margin: 0;
 }
-
+/*estilos de cada producto en la lista*/
 .product-item {
     display: flex;
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid #edf2f7;
 }
-
+/* eliminar borde inferior del ultimo producto*/
 .product-item:last-child {
     border-bottom: none;
 }
-
+/*estilos de imagen del producto*/
 .product-img {
     width: 85px;
     height: 85px;
     object-fit: contain;
     margin-right: 20px;
 }
-
+/*contenedor de detalles del producto*/
 .product-details {
     flex-grow: 1;
 }
+/*estilos del titulo del producto*/
 .product-title {
     font-size: 1.1rem;
     font-weight: 700;
     color: #1a202c;
     margin-bottom: 4px;
 }
-
+/*estilos de informacion adicional del producto*/
 .product-info {
     font-size: 0.9rem;
     color: #718096;
     margin-bottom: 2px;
 }
-
+/*estilos del precio por unidad*/
 .price-per-unit {
     margin-top: 4px;
 }
-
+/*contenedor de acciones del producto*/
 .product-actions {
     display: flex;
     flex-direction: column;
@@ -544,13 +554,13 @@ body {
     justify-content: space-between;
     height: 85px; 
 }
+/*estilos del precio del producto*/
 .product-price {
     font-size: 1.1rem;
     font-weight: 700;
     color: #000000;
 }
-
-
+/*estilos del boton de comprar*/
 .btn-buy {
     background-color: #edf2f7;
     color: #2d3748;
@@ -565,105 +575,110 @@ body {
     gap: 8px;
     transition: background-color 0.2s ease;
 }
-
+/*efecto hover en boton de comprar*/
 .btn-buy:hover {
     background-color: #e2e8f0;
 }
-
+/*estilos de la flecha del boton de scroll top*/
 .arrow {
     font-size: 1.1rem;
     line-height: 1;
 }
-
+/*estilos de la linea divisoria*/
 hr {
     border: none;
     border: 1px solid #ce3d08;
     margin: 20px 0;
 }
-
+/*estilos del footer*/
 .main-footer {
     background-color: #ffffff;
     padding: 60px 40px 30px 40px;
     font-family: 'Segoe UI', Roboto, sans-serif;
     border-top: 1px solid #f0f0f0;
     position: relative; 
+    display: flex;
+    flex-direction: row;
 }
-
+/*contenedor del footer*/
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1.2fr 1.2fr;
+    grid-template-columns: repeat(7, 1fr);
     gap: 40px;
-    align-items: flex-start;
 }
-
+/*estilos de columnas del footer*/
 .footer-column {
     display: flex;
     flex-direction: column;
 }
-
+/*imagen del logo*/
 .footer-logo img {
     max-width: 180px;
-    height: auto;
+    height: auto;  
 }
 
+.footer-map {
+    grid-column: span 3; 
+}
+
+/*mapa de ubicacion*/
 .footer-map img {
-    width: 100%;
-    max-width: 280px;
+    height: 300px;
     border-radius: 4px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
 }
-
+/*informacion de contacto*/
 .footer-info {
     align-items: flex-start;
+    grid-column: span 2;
+    margin-left: 10%;
 }
-
+/*informacion de contacto*/
 .footer-nav ul {
     display: block;
     list-style: none;
     padding: 0;
     margin: 0 0 25px 0;
 }
-
+/*enlaces de contacto*/
 .footer-nav li {
     display: block;
     margin-bottom: 12px;
 }
-
+/*estilos de enlaces de contacto*/
 .footer-nav a {
     text-decoration: none;
     color: #555555;
     font-size: 1rem;
     transition: color 0.2s;
 }
-
+/*efecto hover en enlaces de contacto*/
 .footer-nav a:hover {
     color: #000000;
 }
-
+/*estilos de redes sociales*/
 .footer-socials {
     display: flex;
     gap: 12px;
     margin-bottom: 25px;
 }
-
+/*estilos de iconos de redes sociales*/
 .social-icon img {
     width: 36px;
     height: 36px;
     object-fit: contain;
     transition: transform 0.2s;
 }
-
+/*efecto hover en iconos de redes sociales*/
 .social-icon :hover {
     transform: scale(1.08);
 }
-
+/*estilos de copyright*/
 .footer-copyright {
     font-size: 0.88rem;
     color: #777777;
 }
-
+/*estilos del boton de scroll top*/
 .btn-scroll-top {
     width: 60px;  
     height: 60px;
@@ -678,18 +693,18 @@ hr {
     margin-left: auto;
     align-self: flex-end;
 }
-
+/*efecto hover en boton de scroll top*/
 .btn-scroll-top:hover {
     background-color: #059669;
     transform: translateY(-3px);
 }
-
+/*estilos de la flecha del boton de scroll top*/
 .arrow-up {
     color: #ffffff;
     font-size: 1.6rem;
     font-weight: bold;
 }
-
+/*estilos responsivos para pantallas pequeñas*/
 @media (max-width: 768px) 
 {
 
