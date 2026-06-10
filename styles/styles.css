@@ -39,6 +39,14 @@ header {
     height: 40px;
     display: flex;
     align-items: center;
+}.sesion {
+    color: rgb(7, 6, 6) !important;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.sesion:hover {
+    text-decoration: underline;
+    text-decoration-color: #16C47F;
 }
 /*estilos para el boton de registro*/
 .registro {
@@ -47,6 +55,9 @@ header {
     color: white !important;
     padding: 10px 15px;
     border-radius: 5px;
+}
+.registro:hover {
+    background: #FF9D23;
 }
 /*estilos para la imagen del carrito de compras*/
 .derecha a .carrito-img {
@@ -69,13 +80,27 @@ nav ul {
     list-style: none;
     gap: 20px;
 }
+.navegacion ul:hover {
+   background: #FF9D23;
+    text-decoration-color:#FF9D23;
+    
+}
 /*estilos para los enlaces de navegacion*/
 nav a {
     text-decoration: none;
     color: #1a1a1a;
     font-weight: 400;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
+
+/*estilos para el hover en los enlaces de navegacion*/
+nav a:hover {
+    color: #16C47F;
+    text-decoration: underline;
+    text-decoration-color: #16C47F;
+}
+
 /*estilos para el contenedor de categorias*/
 .categoria {
     display: flex;
@@ -120,6 +145,10 @@ nav a {
 .banner h1 {
     color: #c2185b;
     margin-bottom: 10px;
+}@keyframes mover{
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 /*estilos para la vitrina de productos y su contenedor principal*/
 .vitrina-productos {
@@ -140,24 +169,7 @@ nav a {
 .productos {
     flex: 1 1 0;
 }
-@media (max-width: 980px) {
-    .vitrina-productos {
-       
-        padding: 20px;
-    }
 
-    .filtrado {
-        border-right: none;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        flex: 1 1 100%;
-    }
-
-    .productos {
-        width: 100%;
-    }
-}
 /*estilos para la barra lateral de filtros y el contenedor de filtrado*/
 .barra-lateral-filtros,
 .filtrado {
@@ -735,6 +747,7 @@ hr {
         justify-content: center;
         padding: 20px;
         gap: 20px;
+        display: none;
     }
 
     .derecha {
