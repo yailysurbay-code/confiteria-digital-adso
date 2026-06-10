@@ -355,3 +355,84 @@ nav a {
     background: #fff;
     box-sizing: border-box;
 }
+.card .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'inter', sans-serif;
+}
+/*contenedor del boton de agregar al carrito en cada producto*/
+.items .agregar-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*estilos del icono de agregar al carrito en cada producto*/
+.items .agregar-carrito .icono {
+    filter: brightness(0) invert(1);
+    width: 32px;
+    height: 32px;
+}
+/*contenedor de la parte superior de cada producto*/
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+/*estilos de imagen del producto en cada tarjeta*/
+.card .card-img {
+    width: 100% !important;
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+/*contenedor del pie de cada producto*/
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+/*contenedor de informacion del producto*/
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/*estilos del titulo del producto*/
+.card-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+    margin: 0;
+}
+/*estilos del precio del producto*/
+.card-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin: 0;
+}
+/*estilos del boton de agregar al carrito*/
+.card .agregar-carrito {
+    background: #16C47F; 
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+/*efecto hover en boton de agregar al carrito*/
+.card .agregar-carrito:hover {
+    background: #12a369;
+}
+/*estilos del icono de agregar al carrito*/
+.card .agregar-carrito i {
+    font-size: 20px;
+}
