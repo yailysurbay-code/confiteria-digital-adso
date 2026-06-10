@@ -133,7 +133,9 @@ nav a:hover {
 .banner {
     text-align: center;
     width: 100%;
+    animation: sline 9s infinite;
 }
+
 /*estilos para la imagen del banner*/
 .banner img {
     width: 100%;
@@ -145,11 +147,13 @@ nav a:hover {
 .banner h1 {
     color: #c2185b;
     margin-bottom: 10px;
-}@keyframes mover{
+}
+@keyframes mover{
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
+
 /*estilos para la vitrina de productos y su contenedor principal*/
 .vitrina-productos {
     display: flex;
@@ -741,7 +745,7 @@ hr {
 }
 
 /*estilos responsivos para pantallas pequeñas*/
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
     header {
         flex-wrap: wrap;
         justify-content: center;
@@ -783,9 +787,7 @@ hr {
         grid-template-columns: repeat(2, minmax(180px, 1fr));
         gap: 16px;
     }
-}
 
-@media (max-width: 768px) {
     .vitrina-productos {
         padding: 16px;
     }
