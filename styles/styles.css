@@ -133,7 +133,7 @@ nav a:hover {
 .banner {
     text-align: center;
     width: 100%;
-    animation: sline 9s infinite;
+    
 }
 
 /*estilos para la imagen del banner*/
@@ -142,18 +142,14 @@ nav a:hover {
     height: 410px;
     display: block;
     object-fit: cover;
+  
 }
+
 /*estilos para el titulo del banner*/
 .banner h1 {
     color: #c2185b;
     margin-bottom: 10px;
 }
-@keyframes mover{
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
 /*estilos para la vitrina de productos y su contenedor principal*/
 .vitrina-productos {
     display: flex;
@@ -375,6 +371,7 @@ nav a:hover {
     padding: 0;
     grid-auto-rows: auto;
 }
+
 /*estilos de cada producto en la lista*/
 .card {
     border: 1px solid #ddd;
@@ -384,6 +381,7 @@ nav a:hover {
     background: #fff;
     box-sizing: border-box;
 }
+
 /*contenedor de informacion y boton de agregar al carrito en cada producto*/
 .card .items {
     display: flex;
@@ -608,6 +606,7 @@ body {
 .btn-buy:hover {
     background-color: #e2e8f0;
 }
+
 /*estilos de la flecha del boton de scroll top*/
 .arrow {
     font-size: 1.1rem;
@@ -751,13 +750,21 @@ hr {
         justify-content: center;
         padding: 20px;
         gap: 20px;
-        display: none;
+        display: flex;
     }
 
     .derecha {
         width: 100%;
         justify-content: center;
         gap: 15px;
+    }
+    .logo {
+        width: 120px;
+        height: 60px;
+    }
+    .logo-img {
+        width: 100%;
+        height: 100%;
     }
 
     nav ul {
@@ -844,3 +851,51 @@ hr {
         height: 50px;
     }
 }
+@media (max-width: 768px) {
+    header {
+        display: flex;
+    }
+    .logo {
+        width: 120px;
+        height: 60px;
+    }
+
+    .vitrina-productos {
+        flex-direction: column;
+    }
+
+    .filtrado,
+    .barra-lateral-filtros {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        border-right: none;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-footer {
+        flex-direction: column;
+        
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .derecha {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-price {
+        font-size: 18px;
+    }
+}
+
