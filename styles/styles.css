@@ -80,10 +80,15 @@ nav ul {
     list-style: none;
     gap: 20px;
 }
-.navegacion ul:hover {
+
+.activo {
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+}
+
+ .activo:hover {
    background: #FF9D23;
     text-decoration-color:#FF9D23;
-    
 }
 /*estilos para los enlaces de navegacion*/
 nav a {
@@ -94,12 +99,6 @@ nav a {
     transition: all 0.3s ease;
 }
 
-/*estilos para el hover en los enlaces de navegacion*/
-nav a:hover {
-    color: #16C47F;
-    text-decoration: underline;
-    text-decoration-color: #16C47F;
-}
 
 /*estilos para el contenedor de categorias*/
 .categoria {
@@ -370,7 +369,16 @@ nav a:hover {
     gap: 20px;
     padding: 0;
     grid-auto-rows: auto;
+    transition: all 0.3s ease;
 }
+.card-img{
+    transition: all 0.3s ease;
+
+}
+.card:hover img {
+ 
+}
+
 
 /*estilos de cada producto en la lista*/
 .card {
@@ -380,6 +388,15 @@ nav a:hover {
     border-radius: 10px;
     background: #fff;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    background: #feebe9;
+    transform: scale(1.05);
+}
+
+.card:hover .agregar-carrito {
+    width: 120px;
 }
 
 /*contenedor de informacion y boton de agregar al carrito en cada producto*/
@@ -455,6 +472,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     transition: background 0.2s ease;
+    transition: width 0.5s ease;
 }
 /*efecto hover en boton de agregar al carrito*/
 .card .agregar-carrito:hover {
