@@ -209,6 +209,7 @@ nav a:hover {
 .slider {
     text-align: center;
     width: 100%;
+    gap: 20px;
     overflow: hidden;
     position: relative;
 }
