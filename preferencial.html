@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/preferencial.css">
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
+
+        <div class="derecha header-left">
+            <div class="logo">
+                <a href="index.html"><img class="logo-img" src="assets/logo sin fondo.png" alt="logo"></a>
+            </div>
+            <hr>
+            <nav class="navegacion">
+                <ul>
+                    <li class="activo"><a href="pedidos.html">Pedidos</a></li>
+                    <li class="activo"><a href="preferencial.html">Preferencial</a></li>
+                    <li class="activo"><a href="#">Quienes Somos</a></li>
+                    <li class="mobile-only"><a href="#" class="sesion">Iniciar Sesión</a></li>
+                    <li class="mobile-only"><a href="#" class="registro">Registro</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="derecha header-right">
+            <a href="#" class="carrito">
+                <img class="carrito-img" src="assets/dulceria/carro-de-la-compra 1.svg" alt="Carrito">
+            </a>
+            <a href="#" class="sesion desktop-only">Iniciar Sesión</a>
+            <a href="#" class="registro desktop-only">Registro</a>
+            <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+
+    </header>
+
+    <div class="contenedor">
+
+        <!-- Banner -->
+        <div class="banner"></div>
+
+        <!-- Perfil -->
+        <div class="perfil-header">
+
+            <div class="usuario">
+                <img src="assets/preferencial/WhatsApp Image 2026-06-13 at 4.40.20 PM.png" alt="Perfil">
+
+                <div>
+                    <h3>Yailys Urbay</h3>
+                    <p>yailysurbay@gmail.com</p>
+                </div>
+            </div>
+
+            <button class="btn-pedidos">
+                Mis pedidos
+            </button>
+
+        </div>
+
+        <!-- Formulario -->
+
+        <form class="formulario">
+
+            <div class="campo">
+                <label>Nombre completo</label>
+                <input type="text" placeholder="Ingresa tu nombre completo">
+            </div>
+
+            <div class="campo">
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="Ingresa tu email">
+            </div>
+
+            <div class="campo">
+                <label>Género</label>
+                <select>
+                    <option>Selecciona tu género</option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Teléfono</label>
+                <input type="text" placeholder="Ingresa tu número de teléfono">
+            </div>
+
+            <div class="campo">
+                <label>Ciudad</label>
+                <select>
+                    <option>Selecciona tu ciudad</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Contraseña</label>
+                <input type="password" placeholder="Ingresa tu nueva contraseña">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

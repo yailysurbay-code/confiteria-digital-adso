@@ -5,37 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confitería Adso</title>
-    <link rel="stylesheet" href="/styles/regalo.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/regalo.css">
 </head>
 
 <body>
 
     <header>
+        <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
 
-        <div class="derecha">
-
+        <div class="derecha header-left">
             <div class="logo">
-                <img class="logo-img" src="./assets/logo sin fondo.png" alt="logo">
+                <a href="index.html"><img class="logo-img" src="assets/logo sin fondo.png" alt="logo"></a>
             </div>
             <hr>
-            <nav>
+            <nav class="navegacion">
                 <ul>
-                    <li><a href="#">Pedidos</a></li>
-                    <li><a href="#">Preferencial</a></li>
-                    <li><a href="#">Quienes Somos</a></li>
+                    <li class="activo"><a href="#">Pedidos</a></li>
+                    <li class="activo"><a href="#">Preferencial</a></li>
+                    <li class="activo"><a href="#">Quienes Somos</a></li>
+                    <li class="mobile-only"><a href="#" class="sesion">Iniciar Sesión</a></li>
+                    <li class="mobile-only"><a href="#" class="registro">Registro</a></li>
                 </ul>
             </nav>
-
         </div>
 
-        <div class="derecha">
+        <div class="derecha header-right">
             <a href="#" class="carrito">
-                <img class="carrito-img" src="./assets/regalo/carro-de-la-compra 1.svg" alt="">
+                <img class="carrito-img" src="assets/regalo/carro-de-la-compra 1.svg" alt="Carrito">
             </a>
-            <a href="#" class="sesion">Iniciar Sesión</a>
-            <a href="#" class="registro">Registro</a>
-
-
+            <a href="#" class="sesion desktop-only">Iniciar Sesión</a>
+            <a href="#" class="registro desktop-only">Registro</a>
+            <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
         </div>
 
     </header>
