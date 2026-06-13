@@ -229,13 +229,23 @@ nav a:hover {
     font-size:14px;
 }
 
-.btn-datos{
+.btn-datos,
+.btn-datos:link,
+.btn-datos:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background:#2ecc71;
     color:white;
+    text-decoration: none;
     border:none;
     padding:10px 20px;
     border-radius:5px;
     cursor:pointer;
+}
+
+.btn-datos:hover {
+    background: #28b76f;
 }
 
 /* PEDIDOS */
