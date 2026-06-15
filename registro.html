@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/registro.css">
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
+
+        <div class="derecha header-left">
+            <div class="logo">
+                <a href="index.html"><img class="logo-img" src="assets/logo sin fondo.png" alt="logo"></a>
+            </div>
+            <hr>
+            <nav class="navegacion">
+                <ul>
+                    <li class="activo"><a href="pedidos.html">Pedidos</a></li>
+                    <li class="activo"><a href="preferencial.html">Preferencial</a></li>
+                    <li class="activo"><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li class="mobile-only"><a href="#" class="sesion">Iniciar Sesión</a></li>
+                    <li class="mobile-only"><a href="registro.html" class="registro">Registro</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="derecha header-right">
+            <a href="#" class="carrito">
+                <img class="carrito-img" src="assets/dulceria/carro-de-la-compra 1.svg" alt="Carrito">
+            </a>
+            <a href="#" class="sesion desktop-only">Iniciar Sesión</a>
+            <a href="registro.html" class="registro desktop-only">Registro</a>
+            <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+    </header>
+
+    <main class="registro-page">
+
+        <div class="encabezado">
+            <div>
+                <h2>Bienvenido a <br> nuestro sitio</h2>
+            </div>
+
+            <div class="login">
+                <p>Tienes una cuenta?</p>
+                <a href="#">Entrar</a>
+            </div>
+        </div>
+
+        <form>
+
+            <input type="text"
+                   placeholder="Ingrese su nombre completo">
+
+            <input type="email"
+                   placeholder="Ingrese su correo">
+
+            <input type="email"
+                   placeholder="Confirme su correo">
+
+            <input type="password"
+                   placeholder="Ingrese su contraseña">
+
+            <div class="ayuda">
+                <span>No sabes como registrarte?</span>
+                <a href="#">Soporte</a>
+            </div>
+
+            <button type="submit">
+                Crear cuenta
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
