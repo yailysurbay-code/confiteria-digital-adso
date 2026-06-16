@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/carrito.css">
+<title>Carrito</title>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
+
+    <div class="derecha header-left">
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="./assets/logo sin fondo.png" alt="logo"></a>
+        </div>
+        <hr>
+        <nav class="navegacion">
+            <ul>
+                <li class="activo"><a href="pedidos.html">Pedidos</a></li>
+                <li class="activo"><a href="preferencial.html">Preferencial</a></li>
+                <li class="activo"><a href="quienes-somos.html">Quienes Somos</a></li>
+                <li class="mobile-only"><a href="inicio de session.html" class="sesion">Iniciar Sesión</a></li>
+                <li class="mobile-only"><a href="registro.html" class="registro">Registro</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="derecha header-right">
+        <a href="carrito.html" class="carrito">
+            <img class="carrito-img" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="">
+        </a>
+        <a href="inicio de session.html" class="sesion desktop-only">Iniciar Sesión</a>
+        <a href="registro.html" class="registro desktop-only">Registro</a>
+        <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </div>
+</header>
+
+<div class="steps">
+    <span class="step active">Cart</span>
+    <span class="step">Shipping</span>
+    <span class="step">Checkout</span>
+    <span class="step">Success</span>
+</div>
+
+<div class="content">
+
+<div class="left-box">
+    <h3 class="section-title">Productos del carrito</h3>
+
+    <div class="product">
+        <span>Torta de chocolate</span>
+        <span>$20</span>
+    </div>
+
+    <div class="product">
+        <span>Galletas</span>
+        <span>$10</span>
+    </div>
+</div>
+
+<div class="right-box">
+    <h3>Resumen</h3>
+
+    <div class="summary">
+        <p><span>Subtotal</span><span>$30</span></p>
+        <p><span>Envío</span><span>$5</span></p>
+        <p class="total"><span>Total</span><span>$35</span></p>
+    </div>
+
+    <div class="actions">
+        <a href="index.html" class="btn back">Volver</a>
+        <a href="compras.html" class="btn next">Continuar</a>
+          
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

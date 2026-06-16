@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #2b2b2b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 350px;
+    background: #f2f2f2;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.login{
+    width: 100%;
+    border: 2px solid #1e90ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.login h2{
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.login h2 span{
+    color: orange;
+}
+
+.login input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ffb6b6;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.opciones a{
+    text-decoration: none;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.recuperar{
+    color: orange !important;
+}
+
+button{
+    width: 100%;
+    padding: 15px;
+    background: #20c67a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.registro{
+    margin-top: 20px;
+}
+
+.registro p{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.registro a{
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TABLETS */
+@media (max-width: 768px){
+    .contenedor{
+        max-width: 450px;
+    }
+
+    .login h2{
+        font-size: 1.3rem;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px){
+    .contenedor{
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .login{
+        padding: 15px;
+    }
+
+    .login h2{
+        font-size: 1.2rem;
+        margin-bottom: 35px;
+    }
+
+    .opciones{
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .opciones a{
+        font-size: 0.85rem;
+    }
+
+    button{
+        padding: 12px;
+    }
+}
