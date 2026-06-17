@@ -1,91 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/carrito.css">
-<title>Carrito</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<div class="container">
-
-<header>
-    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
-
-    <div class="derecha header-left">
+    <!-- Header -->
+    <header>
         <div class="logo">
-            <a href="index.html"><img class="logo-img" src="./assets/logo sin fondo.png" alt="logo"></a>
+            <img src="./assets/logo sin fondo.png" alt="Logo">
         </div>
-        <hr>
-        <nav class="navegacion">
-            <ul>
-                <li class="activo"><a href="pedidos.html">Pedidos</a></li>
-                <li class="activo"><a href="preferencial.html">Preferencial</a></li>
-                <li class="activo"><a href="quienes-somos.html">Quienes Somos</a></li>
-                <li class="mobile-only"><a href="inicio de session.html" class="sesion">Iniciar Sesión</a></li>
-                <li class="mobile-only"><a href="registro.html" class="registro">Registro</a></li>
-            </ul>
+
+        <nav>
+            <a href="#">Pedidos</a>
+            <a href="#">Preferencial</a>
+            <a href="#">Quiénes somos</a>
         </nav>
-    </div>
 
-    <div class="derecha header-right">
-        <a href="carrito.html" class="carrito">
-            <img class="carrito-img" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="">
-        </a>
-        <a href="inicio de session.html" class="sesion desktop-only">Iniciar Sesión</a>
-        <a href="registro.html" class="registro desktop-only">Registro</a>
-        <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
-    </div>
-</header>
+        <div class="usuario">
+            <i class="fas fa-shopping-cart"></i>
+            <a href="inicio de session.html">Iniciar sesión</a>
+            <button>Registrarse</button>
+        </div>
+    </header>
 
-<div class="steps">
-    <span class="step active">Cart</span>
-    <span class="step">Shipping</span>
-    <span class="step">Checkout</span>
-    <span class="step">Success</span>
-</div>
+    <!-- Categorías -->
+    <section class="categorias">
+        <span class="confiteria">Confitería</span>
+        <span class="regalos">Regalos</span>
+    </section>
 
-<div class="content">
+    <!-- Pasos -->
+    <section class="pasos">
+        <span>◯ Carrito</span>
+        <span class="activo">◯ Entrega</span>
+        <span>◯ Pago</span>
+        <span>◯ Resumen</span>
+    </section>
 
-<div class="left-box">
-    <h3 class="section-title">Productos del carrito</h3>
+    <!-- Contenido -->
+    <main class="contenedor">
 
-    <div class="product">
-        <span>Torta de chocolate</span>
-        <span>$20</span>
-    </div>
+        <!-- Izquierda -->
+        <section class="productos">
 
-    <div class="product">
-        <span>Galletas</span>
-        <span>$10</span>
-    </div>
-</div>
+            <h2>Productos del carrito</h2>
 
-<div class="right-box">
-    <h3>Resumen</h3>
+            <div class="acordeon">
+                <div class="titulo">
+                    Productos sin oferta
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
 
-    <div class="summary">
-        <p><span>Subtotal</span><span>$30</span></p>
-        <p><span>Envío</span><span>$5</span></p>
-        <p class="total"><span>Total</span><span>$35</span></p>
-    </div>
+            <div class="acordeon">
+                <div class="titulo">
+                    Productos con oferta
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
 
-    <div class="actions">
-        <a href="index.html" class="btn back">Volver</a>
-        <a href="compras.html" class="btn next">Continuar</a>
-          
-        
-    </div>
-</div>
+            <div class="lista-productos">
 
-</div>
-</div>
+                <div class="producto">
+                    <div class="info">
+                        <img src="assets/carrito/reloj.png" alt="reloj">
+                        <span>Reloj rolex</span>
+                        <span>$32.000</span>
+                        <span>x12</span>
+                    </div>
+                    <input type="radio" checked>
+                </div>
+
+                <div class="producto">
+                    <div class="info">
+                        <img src="assets/carrito/vela.png"alt="vela">
+                        <span>Vela aromática</span>
+                        <span>$30.000</span>
+                        <span>x1</span>
+                    </div>
+                    <input type="radio" checked>
+                </div>
+
+                <div class="producto">
+                    <div class="info">
+                        <img src="assets/carrito/jabones.png" alt="jabones">
+                        <span>Jabones</span>
+                        <span>$23.000</span>
+                        <span>x2</span>
+                    </div>
+                    <input type="radio">
+                </div>
+
+                <div class="agregar">
+                    <i class="fas fa-plus-circle"></i>
+                    Agregar más productos
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Derecha -->
+        <aside class="resumen">
+
+            <div class="descuento">
+                <span>Código de descuento</span>
+                <a href="#">Añadir código</a>
+            </div>
+
+            <div class="detalle">
+                <h4>Detalles de pago</h4>
+
+                <div class="fila">
+                    <span>Valor artículos</span>
+                    <span>$666.000</span>
+                </div>
+
+                <div class="fila">
+                    <span>Envío</span>
+                    <span>--</span>
+                </div>
+
+                <div class="fila total">
+                    <span>Total</span>
+                    <span>$666.000</span>
+                </div>
+            </div>
+
+            <div class="direccion">
+                <span>Dirección</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="botones">
+                <button class="volver">Volver</button>
+                <button class="continuar">Continuar</button>
+            </div>
+
+        </aside>
+
+    </main>
 
 </body>
 </html>

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confitería Adso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/regalo.css">
 </head>
 
 <body>
@@ -15,12 +17,14 @@
         <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
 
         <div class="derecha header-left">
+
             <div class="logo">
-                <a href="index.html"><img class="logo-img" src="assets/logo sin fondo.png" alt="logo"></a>
+                <img class="logo-img" src="./assets/logo sin fondo.png" alt="logo">
             </div>
             <hr>
             <nav class="navegacion">
                 <ul>
+
                     <li class="activo"><a href="pedidos.html">Pedidos</a></li>
                     <li class="activo"><a href="preferencial.html">Preferencial</a></li>
                     <li class="activo"><a href="quienes-somos.html">Quienes Somos</a></li>
@@ -28,11 +32,12 @@
                     <li class="mobile-only"><a href="registro.html" class="registro">Registro</a></li>
                 </ul>
             </nav>
+
         </div>
 
         <div class="derecha header-right">
             <a href="carrito.html" class="carrito">
-                <img class="carrito-img" src="assets/regalo/carro-de-la-compra 1.svg" alt="Carrito">
+                <img class="carrito-img" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="">
             </a>
             <a href="inicio de session.html" class="sesion desktop-only">Iniciar Sesión</a>
             <a href="registro.html" class="registro desktop-only">Registro</a>
@@ -50,88 +55,97 @@
         <a href="regalos.html" class="btn-categoria regalo">Regalos</a>
     </section>
 
-    <section class="banner">
-
-        <img class="banner-img" src="./assets/regalo/banner 1 - copia.png" alt="banner">
-
-
-    </section>
+    <div class="slider">
+        <div class="slides">
+            <img src="assets/dulceria/banner 1 - copia.png" alt="banner1">
+            <img src="assets/dulceria/banner2.png" alt="banner2" class="banner_regalo">
+            <img src="assets/dulceria/banner3.png" alt="banner3">
+        </div>
+    </div>
 
     <hr>
     <section class="vitrina-productos">
         <aside class="filtrado">
 
             <div class="seccion-filtro">
-                <div class="encabezado-filtro">
+                <input type="checkbox" id="filter-marca-checkbox" class="filter-checkbox">
+                <label for="filter-marca-checkbox" class="encabezado-filtro">
                     <h3>Marca</h3>
-                    <span class="icono-flecha">&#x2304;</span>
-                </div>
+                    <span class="icono-flecha">&#x25be;</span>
+                </label>
 
-                <div class="caja-busqueda">
-                    <input type="text" placeholder="Ingrese una marca">
-                    <span class="icono-buscar">&#x1F50D;</span>
-                </div>
+                <div class="filter-content">
+                    <div class="caja-busqueda">
+                        <input type="text" placeholder="Ingrese una marca">
+                        <span class="icono-buscar">
+                            <svg viewBox="0 0 24 24" class="search-svg"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </span>
+                    </div>
 
-                <ul class="lista-filtros">
-                    <li>
-                        <label class="contenedor-radio">
-                            <input type="radio" name="filtro-marca" checked>
-                            <span class="punto-color punto-todas"></span>
-                            <span class="texto-etiqueta">Todas las marcas <span class="contador">(7)</span></span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="contenedor-radio">
-                            <input type="radio" name="filtro-marca">
-                            <span class="punto-color punto-colombina"></span>
-                            <span class="texto-etiqueta">Madres<span class="contador">(6)</span></span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="contenedor-radio">
-                            <input type="radio" name="filtro-marca">
-                            <span class="punto-color punto-jet"></span>
-                            <span class="texto-etiqueta">Padres <span class="contador">(1)</span></span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="contenedor-radio deshabilitado">
-                            <input type="radio" name="filtro-marca" disabled>
-                            <span class="punto-color punto-yupis"></span>
-                            <span class="texto-etiqueta">Cumpleaños<span class="contador">(0)</span></span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="contenedor-radio deshabilitado">
-                            <input type="radio" name="filtro-marca" disabled>
-                            <span class="punto-color punto-ferrero"></span>
-                            <span class="texto-etiqueta">Aniversario <span class="contador">(0)</span></span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="contenedor-radio deshabilitado">
-                            <input type="radio" name="filtro-marca" disabled>
-                            <span class="punto-color punto-ramo"></span>
-                            <span class="texto-etiqueta">Amor y Amistad <span class="contador">(0)</span></span>
-                        </label>
-                    </li>
-                </ul>
-                <a href="#" class="ver-mas">Ver más</a>
+                    <ul class="lista-filtros">
+                        <li>
+                            <label class="contenedor-radio">
+                                <input type="radio" name="filtro-marca" checked>
+                                <span class="punto-color punto-todas"></span>
+                                <span class="texto-etiqueta">Todas las marcas <span class="contador">(7)</span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="contenedor-radio">
+                                <input type="radio" name="filtro-marca">
+                                <span class="punto-color punto-colombina"></span>
+                                <span class="texto-etiqueta">Colombina <span class="contador">(6)</span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="contenedor-radio">
+                                <input type="radio" name="filtro-marca">
+                                <span class="punto-color punto-jet"></span>
+                                <span class="texto-etiqueta">Jet <span class="contador">(1)</span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="contenedor-radio deshabilitado">
+                                <input type="radio" name="filtro-marca" disabled>
+                                <span class="punto-color punto-yupis"></span>
+                                <span class="texto-etiqueta">Yupis <span class="contador">(0)</span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="contenedor-radio deshabilitado">
+                                <input type="radio" name="filtro-marca" disabled>
+                                <span class="punto-color punto-ferrero"></span>
+                                <span class="texto-etiqueta">Ferrero Rocher <span class="contador">(0)</span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="contenedor-radio deshabilitado">
+                                <input type="radio" name="filtro-marca" disabled>
+                                <span class="punto-color punto-ramo"></span>
+                                <span class="texto-etiqueta">Ramo <span class="contador">(0)</span></span>
+                            </label>
+                        </li>
+                    </ul>
+                    <a href="#" class="ver-mas">Ver más</a>
+                </div>
             </div>
 
             <hr class="linea-divisoria">
 
             <div class="seccion-filtro">
-                <div class="encabezado-filtro">
+                <input type="checkbox" id="filter-precio-checkbox" class="filter-checkbox">
+                <label for="filter-precio-checkbox" class="encabezado-filtro">
                     <h3>Precio</h3>
-                    <span class="icono-flecha">&#x2304;</span>
-                </div>
-                <div class="contenedor-rango tema-verde">
-                    <input type="range" min="100" max="1000" value="500" class="deslizador">
-                    <div class="etiquetas-rango">
-                        <span>$100</span>
-                        <span class="valor-actual">$500</span>
-                        <span>$1000</span>
+                    <span class="icono-flecha">&#x25be;</span>
+                </label>
+                <div class="filter-content">
+                    <div class="contenedor-rango tema-verde">
+                        <input type="range" min="100" max="1000" value="500" class="deslizador">
+                        <div class="etiquetas-rango">
+                            <span>$100</span>
+                            <span class="valor-actual">$500</span>
+                            <span>$1000</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,16 +153,19 @@
             <hr class="linea-divisoria">
 
             <div class="seccion-filtro">
-                <div class="encabezado-filtro">
+                <input type="checkbox" id="filter-cantidad-checkbox" class="filter-checkbox">
+                <label for="filter-cantidad-checkbox" class="encabezado-filtro">
                     <h3>Cantidad</h3>
-                    <span class="icono-flecha">&#x2304;</span>
-                </div>
-                <div class="contenedor-rango tema-naranja">
-                    <input type="range" min="1" max="10" value="5" class="deslizador">
-                    <div class="etiquetas-rango">
-                        <span>1</span>
-                        <span class="valor-actual">5</span>
-                        <span>10</span>
+                    <span class="icono-flecha">&#x25be;</span>
+                </label>
+                <div class="filter-content">
+                    <div class="contenedor-rango tema-naranja">
+                        <input type="range" min="1" max="10" value="5" class="deslizador">
+                        <div class="etiquetas-rango">
+                            <span>1</span>
+                            <span class="valor-actual">5</span>
+                            <span>10</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,96 +173,110 @@
         </aside>
 
         <section class="productos">
-
+ 
             <div class="card">
-                <img class="card-img" src="./assets/regalo/oso.png" alt="chocolate"
-                    style="width: 237px;height: 203px;">
+                <div class="imgs">
+                    <img class="card-img-left" src="./assets/regalo/oso.png" alt="">
+                    <img class="card-img" src="./assets/regalo/oso.png" alt="">
+                    <img class="card-img-right" src="./assets/regalo/oso.png" alt="">
+                </div>
                 <div class="items">
                     <div class="top">
-                        <h3>oso</h3>
-                        <p>$30000</p>
+                        <h3>oso de peluche</h3>
+                        <p>$3.000</p>
                     </div>
                     <button class="agregar-carrito">
-                        <img class="icono" src="/assets/regalo/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                        <img class="icono" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
                     </button>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-img" src="./assets/regalo/ramo.png" alt="" style="width: 232px;height: 202px;">
+                <div class="imgs">
+                    <img class="card-img-left" src="./assets/regalo/ramo.png" alt="">
+                    <img class="card-img" src="./assets/regalo/ramo.png" alt="">
+                    <img class="card-img-right" src="./assets/regalo/ramo.png" alt="">
+                </div>
                 <div class="items">
                     <div class="top">
                         <h3>ramo</h3>
-                        <p>$25.000</p>
+                        <p>$5.000</p>
                     </div>
                     <button class="agregar-carrito">
-                        <img class="icono" src="/assets/regalo/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                        <img class="icono" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
                     </button>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-img" src="./assets/regalo/caja con dijen.png" alt="" style="width: 212px;height: 203px;">
+                <div class="imgs">
+                    <img class="card-img-left" src="./assets/regalo/caja con dijen.png" alt="">
+                    <img class="card-img" src="./assets/regalo/caja con dijen.png" alt="">
+                    <img class="card-img-right" src="./assets/regalo/caja con dijen.png" alt="">
+                </div>
                 <div class="items">
                     <div class="top">
                         <h3>caja con dijen</h3>
                         <p>$16.000</p>
                     </div>
                     <button class="agregar-carrito">
-                        <img class="icono" src="/assets/regalo/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                        <img class="icono" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
                     </button>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-img" src="./assets/regalo/carta.png" alt="" style="width: 198px;height: 198px;">
+                <div class="imgs">
+                    <img class="card-img-left" src="./assets/regalo/carta.png" alt="">
+                    <img class="card-img" src="./assets/regalo/carta.png" alt="">
+                    <img class="card-img-right" src="./assets/regalo/carta.png" alt="">
+                </div>
                 <div class="items">
                     <div class="top">
                         <h3>carta</h3>
-                        <p>$16.900</p>
+                        <p>$4.000</p>
                     </div>
                     <button class="agregar-carrito">
-                        <img class="icono" src="/assets/regalo/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                        <img class="icono" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
                     </button>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-img" src="./assets/regalo/caja de chocolate.png" alt="" style="width: 237px;height: 204px;">
+                <div class="imgs">
+                    <img class="card-img-left" src="./assets/regalo/caja de chocolate.png" alt="">
+                    <img class="card-img" src="./assets/regalo/caja de chocolate.png" alt="">
+                    <img class="card-img-right" src="./assets/regalo/caja de chocolate.png" alt="">
+                </div>
                 <div class="items">
                     <div class="top">
-                        <h3>caja de chocolate</h3>
-                        <p>$20.000</p>
+                        <h3>caja ded chocolate</h3>
+                        <p>$1.000</p>
                     </div>
                     <button class="agregar-carrito">
-                        <img class="icono" src="/assets/regalo/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                        <img class="icono" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
                     </button>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-img" src="./assets/regalo/retrato.png" alt="" style="width: 250px;height: 242px;">
+                <div class="imgs">
+                    <img class="card-img-left" src="./assets/regalo/retrato.png" alt="">
+                    <img class="card-img" src="./assets/regalo/retrato.png" alt="">
+                    <img class="card-img-right" src="./assets/regalo/retrato.png" alt="">
+                </div>
                 <div class="items">
                     <div class="top">
                         <h3>retrato</h3>
                         <p>$5.000</p>
                     </div>
                     <button class="agregar-carrito">
-                        <img class="icono" src="/assets/regalo/carro-de-la-compra 1.svg" alt="Agregar al carrito">
+                        <img class="icono" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="Agregar al carrito">
                     </button>
                 </div>
             </div>
         </section>
     </section>
-    <section class="videos">
-        <div class="videos-producto">
-            <div class="tarjeta-videos">
-                <video width="100%" height="100%" controls>
-                    <source src="./assets/regalo/cumpleaños.mp4" type="video/mp4">
-                </video>
-                
-            </div>
-        </div>
-    </section>
-    
-            
+    <hr>
+    <section class="videos-section">
+        <input type="radio" name="video-group" id="video-select-bombon" checked class="video-radio">

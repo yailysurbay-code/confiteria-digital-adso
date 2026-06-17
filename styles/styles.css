@@ -714,7 +714,7 @@ nav a:hover {
 
 /* Efecto hover: las imágenes de los lados se abren sutilmente por debajo */
 .card:hover .card-img-left {
-    opacity: 0.6;
+    opacity: 0.20;
     transform: translateX(-18px) translateY(2px) scale(0.92) rotate(-12deg);
 }
 
