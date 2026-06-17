@@ -697,33 +697,38 @@ nav a:hover {
 }
 
 .card-img {
-    z-index: 2;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    image-rendering: auto;
 }
 
 .card-img-left {
     z-index: 1;
-    opacity: 0;
-    transform: translateX(0) scale(0.9) rotate(0deg);
+    opacity: 0.4;
+    transition: all 0.5s ease;
 }
 
 .card-img-right {
     z-index: 1;
-    opacity: 0;
-    transform: translateX(0) scale(0.9) rotate(0deg);
+    opacity: 0.4;
+    transition: all 0.5s ease;
 }
 
 /* Efecto hover: las imágenes de los lados se abren sutilmente por debajo */
-.card:hover .card-img-left {
-    opacity: 0.20;
-    transform: translateX(-18px) translateY(2px) scale(0.92) rotate(-12deg);
+.card:hover .card-img-left{
+    opacity: 0.8;
+    transform: translateX(-25px) scale(0.95) rotate(-12deg);
+    filter: brightness(1.2);
 }
 
-.card:hover .card-img-right {
-    opacity: 0.6;
-    transform: translateX(18px) translateY(2px) scale(0.92) rotate(12deg);
+.card:hover .card-img-right{
+    opacity: 0.8;
+    transform: translateX(25px) scale(0.95) rotate(12deg);
+    filter: brightness(1.2);
 }
 
-.card:hover .card-img {
+.card:hover .card-img-center {
     transform: scale(1.05);
 }
 
@@ -826,6 +831,7 @@ hr {
 .tarjeta-videos {
     width: 100%;
     aspect-ratio: 16 / 9;
+    margin: 0 auto;
     background-color: #000;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
