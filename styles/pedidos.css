@@ -40,7 +40,7 @@ body {
     color: var(--text-main);
 }
 
-/* === HEADER RESPONSIVO === */
+/*  HEADER RESPONSIVO  */
 header {
     background: white;
     display: flex;

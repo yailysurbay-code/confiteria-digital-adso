@@ -1,89 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/compras.css">
-<title>Carrito</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos</title>
+    <link rel="stylesheet" href="styles/carrito.css">
 </head>
+
 <body>
 
-<div class="container">
+    <header>
 
-<header>
-    <input type="checkbox" id="menu-toggle-checkbox" class="menu-toggle-checkbox">
 
-    <div class="derecha header-left">
-        <div class="logo">
-            <a href="index.html"><img class="logo-img" src="./assets/logo sin fondo.png" alt="logo"></a>
+        <div class="derecha header-left">
+            <div class="logo">
+                <a href="index.html"><img class="logo-img" src="assets/logo sin fondo.png" alt="logo"></a>
+            </div>
+            <hr>
+            <nav class="navegacion">
+                <ul>
+                    <li class="activo"><a href="pedidos.html">Pedidos</a></li>
+                    <li class="activo"><a href="preferencial.html">Preferencial</a></li>
+                    <li class="activo"><a href="quienes-somos.html">Quienes Somos</a></li>
+                   
+                </ul>
+            </nav>
         </div>
-        <hr>
-        <nav class="navegacion">
-            <ul>
-                <li class="activo"><a href="pedidos.html">Pedidos</a></li>
-                <li class="activo"><a href="preferencial.html">Preferencial</a></li>
-                <li class="activo"><a href="quienes-somos.html">Quienes Somos</a></li>
-                <li class="mobile-only"><a href="inicio de session.html" class="sesion">Iniciar Sesión</a></li>
-                <li class="mobile-only"><a href="registro.html" class="registro">Registro</a></li>
-            </ul>
-        </nav>
-    </div>
 
-    <div class="derecha header-right">
-        <a href="carrito.html" class="carrito">
-            <img class="carrito-img" src="./assets/dulceria/carro-de-la-compra 1.svg" alt="">
-        </a>
-        <a href="inicio de session.html" class="sesion desktop-only">Iniciar Sesión</a>
-        <a href="registro.html" class="registro desktop-only">Registro</a>
-        <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="derecha header-right">
+            <a href="carrito.html" class="carrito">
+                <img class="carrito-img" src="assets/dulceria/carro-de-la-compra 1.svg" alt="Carrito">
+            </a>
+            <a href="inicio de session.html" class="sesion desktop-only">Iniciar Sesión</a>
+            <a href="registro.html" class="registro desktop-only">Registro</a>
+            <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+        </div>
+
+    </header>
+    <section class="categoria">
+
+        <a href="index.html" class="btn-categoria dulceria">Dulceria</a>
+        <a href="regalos.html" class="btn-categoria regalo">Regalos</a>
+    </section>
+    <div class="auto">
+        <label>
+            <input type="checkbox">
+            <span>carrito</span>
         </label>
+        <label>
+            <input type="checkbox">
+
+            <span> compras </span>
+        </label>
+        <label>
+            <input type="checkbox">
+            <span> pago</span>
+        </label>
+        <label>
+            <input type="checkbox">
+            <span> compra exitosa</span>
+        </label>
+
     </div>
-</header>
+    <div class="padre">
+        <div class="hijo">
+            <h3>productos del carrito</h3>
+            <div class="campo">
+                <h3>Productos sin ofertas</h3>
+                <h3>^</h3>
+            </div>
+            <div class="campo">
+                <h3>Productos con ofertas</h3>
+                <h3>^</h3>
+            </div>
+            <div class="campo-select">
+                <div class="select-ofertas">
+                    <h3>Productos con ofertas</h3>
+                    <h3>^</h3>
+                </div>
 
-<div class="steps">
-    <span class="step active">Cart</span>
-    <span class="step">Shipping</span>
-    <span class="step">Checkout</span>
-    <span class="step">Success</span>
-</div>
+                <div class="producto">
+                    <div class="prod">
+                        <img src="assets/carrito/reloj.png" alt="">
+                        <h6>Reloj Rolex</h6>
+                        <h6>$32.0000</h6>
+                        <h6> x12</h6>
+                    </div>
 
-<div class="contenido">
+                    <input type="radio">
+                </div>
+                <div class="producto">
+                    <div class="prod">
+                        <img src="assets/carrito/vela.png" alt="">
+                        <h6>vela aromatica</h6>
+                        <h6>$30.0000</h6>
+                        <h6> x1</h6>
+                    </div>
+                    <input type="radio">
+                </div>
+                <div class="producto">
+                    <div class="prod">
+                        <img src="assets/carrito/jabones.png" alt="">
+                        <h6>jabones</h6>
+                        <h6>$23.0000</h6>
+                        <h6> x2</h6>
+                    </div>
+                    <input type="radio">
+                </div>
+                <div class="agregar">
+                    <h3>+</h3>
+                    <h6>agregar producto</h6>
 
-<div class="left-box">
-    <h3 class="titulo">Productos del carrito</h3>
+                </div>
+            </div>
 
-    <div class="producto">
-        <span>Torta de chocolate</span>
-        <span>$20</span>
+        </div>
+        <div class="pagos">
+            <div class="grupos">
+                <h6> codigo de descuento</h6>
+                <h6> añadir codigo</h6>
+
+            </div>
+            <h5>Detalle de pago</h5>
+            <hr>
+            <div class="grupos">
+                <h5> valor articulo</h5>
+                <h3>$666.000</h3>
+            </div>
+            <div class="grupos">
+                <h5>Envio</h5>
+                <h3>-</h3> 
+            </div>
+
+            <hr>
+            <div class="grupos">
+                <h1>Total</h1>
+                <h3>$666.000</h3>
+            </div>
+            <div class="grupos">
+                <h4>Dirreccion</h4>
+                <h3>-</h3>
+                <h3>^</h3>
+
+            </div>
+            <div class="botton">
+                <a href="pedidos.html" class="button"> volver</a>
+                 <a href="compras.html" class="btn"> continuar</a>
+
+            </div>
+
+            
+        </div>
+
     </div>
-
-    <div class="producto">
-        <span>Galletas</span>
-        <span>$10</span>
-    </div>
-</div>
-
-<div class="right-box">
-    <h3>Resumen</h3>
-
-    <div class="summary">
-        <p><span>Subtotal</span><span>$30</span></p>
-        <p><span>Envío</span><span>$5</span></p>
-        <p class="total"><span>Total</span><span>$35</span></p>
-    </div>
-
-    <div class="actions">
-        <a href="#" class="btn back">Volver</a>
-        <a href="shipping.html" class="btn next">Continuar</a>
-    </div>
-</div>
-
-</div>
-</div>
-
-</body>
-</html>
