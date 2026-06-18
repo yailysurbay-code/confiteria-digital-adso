@@ -726,3 +726,129 @@ nav a:hover {
 .card:hover .card-img {
     transform: scale(1.05);
 }
+.featured-section {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.ranking-panel {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 25px;
+    text-align: center;
+}
+
+.ranking-panel h2 {
+    color: #8c6d5b;
+}
+
+.ranking-panel p {
+    color: #a38f83;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.ranking-panel img {
+    margin: 0 auto;
+}
+
+.featured-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ==========================================================================
+   Footer / Pie de página
+   ========================================================================== */
+.main-footer {
+    background-color: #fff;
+    border-top: 1px solid var(--border-color);
+    padding: 50px 0 20px;
+    color: #666;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: center;
+}
+
+.footer-logo-section img {
+    height: 50px;
+}
+
+.footer-map-section img {
+    width: 100%;
+}
+
+.footer-links-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-social-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 15px;
+    font-size: 1.3rem;
+    justify-content: center;
+}
+
+.social-icons-wrapper a:hover {
+    color: #e0444a; /* Rojo rosado al pasar el mouse */
+}
+
+.copyright {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Media Queries (Responsive)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .products-section, .featured-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-nav {
+        display: none; /* Ocultar nav principal en móvil, se necesitaría un menú hamburguesa */
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-logo-section, .footer-map-section, .footer-links-section, .footer-social-section {
+        display: flex;
+        justify-content: center;
+    }
+}

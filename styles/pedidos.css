@@ -1,4 +1,4 @@
-*:root {
+:root {
     /* Paleta de colores armoniosa */
     --primary: #F93827;       /* Rojo vibrante confitería */
     --primary-hover: #e02f1f;
@@ -30,54 +30,89 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-* {
     box-sizing: border-box;
-    font-family: var(--font-body);
 }
 
-/*estilos generales del body*/
 body {
     min-height: 100vh;
-    background: #fff;
+    background: var(--bg-main); /* Cambiado a bg-main para consistencia */
+    font-family: var(--font-body);
+    color: var(--text-main);
 }
 
+/* === HEADER RESPONSIVO === */
 header {
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    min-height: 90px;
     width: 100%;
-    margin: 0;
     padding: 0 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
+    box-shadow: var(--shadow-sm);
+    position: sticky; /* Mejor comportamiento que fixed/relative estático */
     top: 0;
-    left: 0;
+    z-index: 100;
 }
 
-/*estilos para la parte derecha del header*/
-.derecha {
+.logo {
+    width: 140px;
+    height: auto;
+    max-height: 70px;
+    flex-shrink: 0;
+}
+
+.logo .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Navegación y Menús */
+nav ul, .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a, .menu a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transition-smooth);
+}
+
+.activo {
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    transition: var(--transition-smooth);
+}
+
+.activo:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Derecha del Header */
+.derecha, .acciones {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-shrink: 0;
 }
 
-/*estilos para la linea divisoria en la parte derecha del header*/
 .derecha hr {
-    height: 100px;
-    border: 1px solid #ddd;
+    height: 40px; /* Reducido de 100px para que luzca estético */
+    border: none;
+    border-left: 1px solid var(--border-color);
 }
 
-/*estilos para los enlaces en la parte derecha del header*/
 .derecha a {
     text-decoration: none;
-    color: #1a1a1a;
     font-weight: 400;
     font-size: 16px;
-    height: 40px;
     display: flex;
     align-items: center;
 }
@@ -91,142 +126,82 @@ header {
 
 .sesion:hover {
     color: var(--secondary) !important;
-    text-decoration: underline;
-    text-decoration-color: var(--secondary);
 }
 
-/*estilos para el boton de registro*/
-.registro {
+.registro, .acciones button {
     background: var(--primary);
     color: white !important;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
     transition: var(--transition-smooth);
 }
 
-.registro:hover {
-    background: var(--accent);
+.registro:hover, .acciones button:hover {
+    background: var(--primary-hover);
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
 }
 
-/*estilos para la imagen del carrito de compras*/
 .derecha a .carrito-img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
 }
 
-/*estilos para el contenedor del logo*/
-.logo {
-    width: 140px;
-    height: 80px;
-}
-
-/*estilos para la imagen del logo*/
-.logo .logo-img {
-    width: 100%;
-    height: 100%;
-}
-
-/*estilos para el contenedor de navegacion*/
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.activo {
-    padding: 5px 15px;
-    border-radius: var(--radius-md);
-    transition: var(--transition-smooth);
-}
-
-.activo:hover {
-    background: var(--accent);
-    text-decoration-color: var(--accent);
-}
-
-/*estilos para los enlaces de navegacion*/
-nav a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 500;
-    font-size: 16px;
-    transition: var(--transition-smooth);
-}
-
-nav a:hover {
-    color: var(--text-main);
-}
-
-.menu{
-    display:flex;
-    gap:30px;
-    list-style:none;
-}
-
-.menu a{
-    text-decoration:none;
-    color:#333;
-}
-
-.acciones{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.acciones button{
-    background:#ff5b3d;
-    color:white;
-    border:none;
-    padding:8px 15px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-/* CONTENEDOR */
-.contenedor{
-    width:80%;
-    margin:30px auto;
+/* === ESTRUCTURA PRINCIPAL (CONTENEDOR) === */
+.contenedor {
+    width: 90%;
+    max-width: 1200px; /* Evita que en pantallas gigantes se deforme */
+    margin: 30px auto;
 }
 
 /* BANNER */
-.banner{
-    height:70px;
-    border-radius:8px;
-    background:linear-gradient(
-        90deg,
-        #c6defa,
-        #f5eecf
-    );
-    margin-bottom:30px;
+.banner {
+    height: 120px; /* Mayor altura base para mejor visualización */
+    border-radius: var(--radius-lg);
+    background: linear-gradient(90deg, #c6defa, #f5eecf);
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-sm);
 }
 
 /* PERFIL */
-.perfil{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
+.perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
 }
 
-.usuario{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.usuario img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    object-fit:cover;
+.usuario img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
 }
 
-.usuario p{
-    color:gray;
-    font-size:14px;
+.usuario h3 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.usuario p {
+    color: var(--text-muted);
+    font-size: 14px;
 }
 
 .btn-datos,
@@ -235,86 +210,171 @@ nav a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background:#2ecc71;
-    color:white;
+    background: var(--secondary);
+    color: white;
     text-decoration: none;
-    border:none;
-    padding:10px 20px;
-    border-radius:5px;
-    cursor:pointer;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
 }
 
 .btn-datos:hover {
-    background: #28b76f;
+    background: var(--secondary-hover);
+    box-shadow: var(--shadow-md);
 }
 
-/* PEDIDOS */
-.pedidos{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+/* PEDIDOS (GRID OPTIMIZADO) */
+.pedidos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columnas en Escritorio */
+    gap: 20px;
 }
 
-.columna{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.pedido{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+.pedido {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
 }
 
-.pedido img{
-    width:50px;
-    height:50px;
-    object-fit:cover;
+.pedido:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-.pedido h4{
-    font-size:15px;
+.pedido img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
 }
 
-.pedido p{
-    font-size:13px;
-    color:gray;
+.pedido-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.pedido button{
-    margin-left:auto;
-    background:#f9a825;
-    color:white;
-    border:none;
-    padding:8px 15px;
-    border-radius:5px;
-    cursor:pointer;
+.pedido h4 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    color: var(--text-main);
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
+.pedido p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
 
-    .pedidos{
-        grid-template-columns:1fr;
+.pedido button {
+    margin-left: auto;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.pedido button:hover {
+    background: var(--accent-hover);
+}
+
+
+/*
+   MEDIA QUERIES (RESPONSIVE STYLES)
+  */
+
+/* === ADAPTACIÓN PARA TABLETS (Breakpoints entre 768px y 1024px) === */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 20px;
+        min-height: 80px;
     }
 
-    .perfil{
-        flex-direction:column;
-        gap:15px;
+    nav ul, .menu {
+        gap: 15px;
     }
 
-    .navbar{
-        flex-direction:column;
-        gap:15px;
+    nav a, .menu a {
+        font-size: 15px;
     }
 
-    .menu{
-        flex-wrap:wrap;
-        justify-content:center;
+    .contenedor {
+        width: 92%;
+    }
+
+    /* Los pedidos pasan a 1 sola columna si el espacio de la tablet es reducido */
+    .pedidos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === ADAPTACIÓN PARA MÓVILES Y TABLETS VERTICALES (Menos de 768px) === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .derecha {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .derecha hr {
+        display: none; /* Quitamos la línea vertical en móviles */
+    }
+
+    nav ul, .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .usuario {
+        flex-direction: column;
+    }
+
+    .btn-datos {
+        width: 100%; /* El botón ocupa todo el ancho disponible */
+    }
+
+    .pedido {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .pedido button {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
     }
 }
