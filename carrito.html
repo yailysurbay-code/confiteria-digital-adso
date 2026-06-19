@@ -47,114 +47,606 @@
         <a href="index.html" class="btn-categoria dulceria">Dulceria</a>
         <a href="regalos.html" class="btn-categoria regalo">Regalos</a>
     </section>
-    <div class="auto">
-        <label>
-            <input type="checkbox">
-            <span>carrito</span>
-        </label>
-        <label>
-            <input type="checkbox">
-
-            <span> compras </span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span> pago</span>
-        </label>
-        <label>
-            <input type="checkbox">
-            <span> compra exitosa</span>
-        </label>
-
-    </div>
-    <div class="padre">
-        <div class="hijo">
-            <h3>productos del carrito</h3>
-            <div class="campo">
-                <h3>Productos sin ofertas</h3>
-                <h3>^</h3>
+    <!-- VISTA 1: CARRITO -->
+    <div id="vista-carrito" class="vista-paso">
+        <div class="stepper">
+            <div class="step step-active">
+                <div class="step-checkbox"></div>
+                <span>Carrito</span>
             </div>
-            <div class="campo">
-                <h3>Productos con ofertas</h3>
-                <h3>^</h3>
+            <div class="step">
+                <div class="step-checkbox"></div>
+                <span>Entrega</span>
             </div>
-            <div class="campo-select">
-                <div class="select-ofertas">
-                    <h3>Productos con ofertas</h3>
-                    <h3>^</h3>
-                </div>
-
-                <div class="producto">
-                    <div class="prod">
-                        <img src="assets/carrito/reloj.png" alt="">
-                        <h6>Reloj Rolex</h6>
-                        <h6>$32.0000</h6>
-                        <h6> x12</h6>
-                    </div>
-
-                    <input type="radio">
-                </div>
-                <div class="producto">
-                    <div class="prod">
-                        <img src="assets/carrito/vela.png" alt="">
-                        <h6>vela aromatica</h6>
-                        <h6>$30.0000</h6>
-                        <h6> x1</h6>
-                    </div>
-                    <input type="radio">
-                </div>
-                <div class="producto">
-                    <div class="prod">
-                        <img src="assets/carrito/jabones.png" alt="">
-                        <h6>jabones</h6>
-                        <h6>$23.0000</h6>
-                        <h6> x2</h6>
-                    </div>
-                    <input type="radio">
-                </div>
-                <div class="agregar">
-                    <h3>+</h3>
-                    <h6>agregar producto</h6>
-
-                </div>
+            <div class="step">
+                <div class="step-checkbox"></div>
+                <span>Pago</span>
             </div>
-
-        </div>
-        <div class="pagos">
-            <div class="grupos">
-                <h6> codigo de descuento</h6>
-                <h6> añadir codigo</h6>
-
+            <div class="step">
+                <div class="step-checkbox"></div>
+                <span>Resumen</span>
             </div>
-            <h5>Detalle de pago</h5>
-            <hr>
-            <div class="grupos">
-                <h5> valor articulo</h5>
-                <h3>$666.000</h3>
-            </div>
-            <div class="grupos">
-                <h5>Envio</h5>
-                <h3>-</h3> 
-            </div>
-
-            <hr>
-            <div class="grupos">
-                <h1>Total</h1>
-                <h3>$666.000</h3>
-            </div>
-            <div class="grupos">
-                <h4>Dirreccion</h4>
-                <h3>-</h3>
-                <h3>^</h3>
-
-            </div>
-            <div class="botton">
-                <a href="pedidos.html" class="button"> volver</a>
-                 <a href="compras.html" class="btn"> continuar</a>
-
-            </div>
-
-            
         </div>
 
+        <div class="padre">
+            <div class="hijo">
+                <h2 class="titulo-seccion">Productos del carrito</h2>
+                
+                <details class="acordeon-container">
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Productos sin oferta</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido">
+                        <div class="no-productos">No hay productos sin oferta en el carrito.</div>
+                    </div>
+                </details>
+                
+                <details class="acordeon-container" open>
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Productos con oferta</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido">
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="assets/carrito/reloj.png" alt="Reloj Rolex">
+                                <span class="producto-nombre">Reloj rolex</span>
+                                <span class="producto-precio">$32.000</span>
+                                <span class="producto-cantidad">x12</span>
+                            </div>
+                            <div class="radio-button radio-activo">
+                                <div class="radio-punto"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="assets/carrito/vela.png" alt="Vela aromática">
+                                <span class="producto-nombre">Vela aromática</span>
+                                <span class="producto-precio">$30.000</span>
+                                <span class="producto-cantidad">x1</span>
+                            </div>
+                            <div class="radio-button radio-activo">
+                                <div class="radio-punto"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="assets/carrito/jabones.png" alt="Jabones">
+                                <span class="producto-nombre">Jabones</span>
+                                <span class="producto-precio">$23.000</span>
+                                <span class="producto-cantidad">x2</span>
+                            </div>
+                            <div class="radio-button"></div>
+                        </div>
+                        
+                        <div class="agregar">
+                            <div class="agregar-icono">+</div>
+                            <span class="agregar-texto">Agregar más productos</span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="pagos">
+                <div class="grupos descuento-grupo">
+                    <span class="descuento-label">Código de descuento</span>
+                    <a href="#" class="descuento-link">Añadir código</a>
+                </div>
+                
+                <h3 class="pagos-titulo">Detalles de pago</h3>
+                <hr class="pagos-divisor">
+                
+                <div class="grupos">
+                    <span class="pago-label">Valor artículos</span>
+                    <span class="pago-valor">$666.000</span>
+                </div>
+                
+                <div class="grupos">
+                    <span class="pago-label">Envío</span>
+                    <span class="pago-valor">-</span>
+                </div>
+                
+                <hr class="pagos-divisor">
+                
+                <div class="grupos total-grupo">
+                    <span class="total-label">Total</span>
+                    <span class="total-valor">$666.000</span>
+                </div>
+                
+                <div class="grupos direccion-grupo">
+                    <span class="direccion-label">Dirección</span>
+                    <div class="direccion-valor">
+                        <span>-</span>
+                        <span class="chevron chevron-abajo-pequeno"></span>
+                    </div>
+                </div>
+                
+                <div class="botones-container">
+                    <a href="pedidos.html" class="btn-volver">Volver</a>
+                    <a href="#" id="btn-continuar-carrito" class="btn-continuar">Continuar</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- VISTA 2: ENTREGA -->
+    <div id="vista-entrega" class="vista-paso" style="display: none;">
+        <div class="stepper">
+            <div class="step step-completed">
+                <div class="step-checkbox step-checked">✓</div>
+                <span>Carrito</span>
+            </div>
+            <div class="step step-active">
+                <div class="step-checkbox"></div>
+                <span>Entrega</span>
+            </div>
+            <div class="step">
+                <div class="step-checkbox"></div>
+                <span>Pago</span>
+            </div>
+            <div class="step">
+                <div class="step-checkbox"></div>
+                <span>Resumen</span>
+            </div>
+        </div>
+
+        <div class="padre">
+            <div class="hijo">
+                <h2 class="titulo-seccion">Datos de entrega</h2>
+                
+                <details class="acordeon-container">
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Datos básicos</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido datos-basicos-form">
+                        <div class="campo-input">
+                            <label class="input-label">Nombre completo</label>
+                            <input type="text" class="input-control" value="Yailys Urbay" placeholder="Nombre completo">
+                        </div>
+                        
+                        <div class="campo-input">
+                            <label class="input-label">Correo electrónico</label>
+                            <input type="email" class="input-control" value="yailysurbay@gmail.com" placeholder="Correo electrónico">
+                        </div>
+                        
+                        <div class="campo-input">
+                            <label class="input-label">Teléfono</label>
+                            <input type="tel" class="input-control" value="312 345 6789" placeholder="Ingresa tu número de teléfono">
+                        </div>
+                    </div>
+                </details>
+                
+                <details class="acordeon-container" open>
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Datos de domicilio</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido">
+                        <h4 class="subtitulo-datos">Datos de la dirección</h4>
+                        
+                        <div class="direcciones-chips">
+                            <div class="direccion-chip chip-activo">
+                                <div class="chip-radio">
+                                    <span class="chip-check">✓</span>
+                                </div>
+                                <span>Calle 15</span>
+                            </div>
+                            
+                            <div class="direccion-chip chip-activo">
+                                <div class="chip-radio">
+                                    <span class="chip-check">✓</span>
+                                </div>
+                                <span>Nro. Cruce 6</span>
+                            </div>
+                            
+                            <div class="direccion-chip chip-activo">
+                                <div class="chip-radio">
+                                    <span class="chip-check">✓</span>
+                                </div>
+                                <span>Nro. Residencia 81</span>
+                            </div>
+                        </div>
+                        
+                        <div class="informacion-adicional-bar">
+                            <div class="chip-radio"></div>
+                            <span>Información adicional</span>
+                        </div>
+                        
+                        <div class="agregar">
+                            <div class="agregar-icono">+</div>
+                            <span class="agregar-texto">Agregar más direcciones</span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="pagos">
+                <div class="grupos descuento-grupo">
+                    <span class="descuento-label">Código de descuento</span>
+                    <a href="#" class="descuento-link">Añadir código</a>
+                </div>
+                
+                <h3 class="pagos-titulo">Detalles de pago</h3>
+                <hr class="pagos-divisor">
+                
+                <div class="grupos">
+                    <span class="pago-label">Valor artículos</span>
+                    <span class="pago-valor">$666.000</span>
+                </div>
+                
+                <div class="grupos">
+                    <span class="pago-label">Envío</span>
+                    <span class="pago-valor">-</span>
+                </div>
+                
+                <hr class="pagos-divisor">
+                
+                <div class="grupos total-grupo">
+                    <span class="total-label">Total</span>
+                    <span class="total-valor">$666.000</span>
+                </div>
+                
+                <div class="grupos direccion-grupo">
+                    <span class="direccion-label">Dirección</span>
+                    <div class="direccion-valor">
+                        <span>Calle 15 # 6 - 81</span>
+                        <span class="chevron chevron-abajo-pequeno"></span>
+                    </div>
+                </div>
+                
+                <div class="botones-container">
+                    <a href="#" id="btn-volver-entrega" class="btn-volver">Volver</a>
+                    <a href="#" id="btn-continuar-entrega" class="btn-continuar">Continuar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VISTA 3: PAGO -->
+    <div id="vista-pago" class="vista-paso" style="display: none;">
+        <div class="stepper">
+            <div class="step step-completed">
+                <div class="step-checkbox step-checked">✓</div>
+                <span>Carrito</span>
+            </div>
+            <div class="step step-completed">
+                <div class="step-checkbox step-checked">✓</div>
+                <span>Entrega</span>
+            </div>
+            <div class="step step-active">
+                <div class="step-checkbox"></div>
+                <span>Pago</span>
+            </div>
+            <div class="step">
+                <div class="step-checkbox"></div>
+                <span>Resumen</span>
+            </div>
+        </div>
+
+        <div class="padre">
+            <div class="hijo">
+                <h2 class="titulo-seccion">Métodos de pago</h2>
+                
+                <details class="acordeon-container">
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">PSE</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido pse-form">
+                        <div class="campo-input">
+                            <label class="input-label">Selecciona tu banco</label>
+                            <select class="input-control select-control">
+                                <option value="" disabled selected>Elige una entidad bancaria</option>
+                                <option value="bancolombia">Bancolombia</option>
+                                <option value="bogota">Banco de Bogotá</option>
+                                <option value="nequi">Nequi</option>
+                                <option value="daviplata">Daviplata</option>
+                                <option value="davivienda">Davivienda</option>
+                                <option value="bbva">BBVA Colombia</option>
+                            </select>
+                        </div>
+                        <div class="campo-input">
+                            <label class="input-label">Correo registrado en PSE</label>
+                            <input type="email" class="input-control" placeholder="ejemplo@correo.com">
+                        </div>
+                    </div>
+                </details>
+                
+                <details class="acordeon-container" open>
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Tarjeta débito/crédito</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido">
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                                <span class="producto-nombre">Bancolombia</span>
+                                <p class="producto-precio">•••• •••• •••• 4578</p>
+                            </div>
+                            <div class="radio-button radio-activo">
+                                <div class="radio-punto"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                                <span class="producto-nombre">BBVA</span>
+                                <p class="producto-precio">•••• •••• •••• 4521</p>
+                            </div>
+                            <div class="radio-button"></div>
+                        </div>
+                        
+                        <div class="agregar">
+                            <div class="agregar-icono">+</div>
+                            <span class="agregar-texto">Agregar nuevas tarjetas</span>
+                        </div>
+                    </div>
+                </details>
+                
+                <div class="agregar-metodo-completo">
+                    <div class="agregar-icono">+</div>
+                    <span class="agregar-texto">Agregar método de pago</span>
+                </div>
+            </div>
+
+            <div class="pagos">
+                <div class="grupos descuento-grupo">
+                    <span class="descuento-label">Código de descuento</span>
+                    <a href="#" class="descuento-link">Añadir código</a>
+                </div>
+                
+                <h3 class="pagos-titulo">Detalles de pago</h3>
+                <hr class="pagos-divisor">
+                
+                <div class="grupos">
+                    <span class="pago-label">Valor artículos</span>
+                    <span class="pago-valor">$666.000</span>
+                </div>
+                
+                <div class="grupos">
+                    <span class="pago-label">Envío</span>
+                    <span class="pago-valor">$15.000</span>
+                </div>
+                
+                <hr class="pagos-divisor">
+                
+                <div class="grupos total-grupo">
+                    <span class="total-label">Total</span>
+                    <span class="total-valor">$681.000</span>
+                </div>
+                
+                <div class="grupos direccion-grupo">
+                    <span class="direccion-label">Dirección</span>
+                    <div class="direccion-valor">
+                        <span>Calle 15 # 6 - 81</span>
+                        <span class="chevron chevron-abajo-pequeno"></span>
+                    </div>
+                </div>
+                
+                <div class="botones-container">
+                    <a href="#" id="btn-volver-pago" class="btn-volver">Volver</a>
+                    <a href="#" id="btn-continuar-pago" class="btn-continuar">Continuar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VISTA 4: RESUMEN -->
+    <div id="vista-resumen" class="vista-paso" style="display: none;">
+        <div class="stepper">
+            <div class="step step-completed">
+                <div class="step-checkbox step-checked">✓</div>
+                <span>Carrito</span>
+            </div>
+            <div class="step step-completed">
+                <div class="step-checkbox step-checked">✓</div>
+                <span>Entrega</span>
+            </div>
+            <div class="step step-completed">
+                <div class="step-checkbox step-checked">✓</div>
+                <span>Pago</span>
+            </div>
+            <div class="step step-active">
+                <div class="step-checkbox"></div>
+                <span>Resumen</span>
+            </div>
+        </div>
+
+        <div class="padre">
+            <div class="hijo">
+                <h2 class="titulo-seccion">Resumen de compra</h2>
+                
+                <details class="acordeon-container" open>
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Revisar productos</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido">
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="assets/carrito/reloj.png" alt="Reloj Rolex">
+                                <span class="producto-nombre">Reloj rolex</span>
+                                <span class="producto-precio">$32.000</span>
+                                <span class="producto-cantidad">x12</span>
+                            </div>
+                        </div>
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="assets/carrito/vela.png" alt="Vela aromática">
+                                <span class="producto-nombre">Vela aromática</span>
+                                <span class="producto-precio">$30.000</span>
+                                <span class="producto-cantidad">x1</span>
+                            </div>
+                        </div>
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="assets/carrito/jabones.png" alt="Jabones">
+                                <span class="producto-nombre">Jabones</span>
+                                <span class="producto-precio">$23.000</span>
+                                <span class="producto-cantidad">x2</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="acordeon-container" open>
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Datos de entrega</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido datos-basicos-form">
+                        <div class="campo-input">
+                            <label class="input-label">Destinatario</label>
+                            <input type="text" class="input-control" value="Yailys Urbay" readonly>
+                        </div>
+                        <div class="campo-input">
+                            <label class="input-label">Dirección de envío</label>
+                            <input type="text" class="input-control" value="Calle 15 # 6 - 81" readonly>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="acordeon-container" open>
+                    <summary class="campo-acordeon">
+                        <span class="acordeon-titulo">Método de pago seleccionado</span>
+                        <span class="chevron"></span>
+                    </summary>
+                    <div class="acordeon-contenido">
+                        <div class="producto">
+                            <div class="prod">
+                                <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                                <span class="producto-nombre">Bancolombia</span>
+                                <span class="producto-precio">•••• •••• •••• 4578</span>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="pagos">
+                <div class="grupos descuento-grupo">
+                    <span class="descuento-label">Código de descuento</span>
+                    <a href="#" class="descuento-link">Añadir código</a>
+                </div>
+                
+                <h3 class="pagos-titulo">Detalles de pago</h3>
+                <hr class="pagos-divisor">
+                
+                <div class="grupos">
+                    <span class="pago-label">Valor artículos</span>
+                    <span class="pago-valor">$666.000</span>
+                </div>
+                
+                <div class="grupos">
+                    <span class="pago-label">Envío</span>
+                    <span class="pago-valor">$15.000</span>
+                </div>
+                
+                <hr class="pagos-divisor">
+                
+                <div class="grupos total-grupo">
+                    <span class="total-label">Total</span>
+                    <span class="total-valor">$681.000</span>
+                </div>
+                
+                <div class="grupos direccion-grupo">
+                    <span class="direccion-label">Dirección</span>
+                    <div class="direccion-valor">
+                        <span>Calle 15 # 6 - 81</span>
+                        <span class="chevron chevron-abajo-pequeno"></span>
+                    </div>
+                </div>
+                
+                <div class="botones-container">
+                    <a href="#" id="btn-volver-resumen" class="btn-volver">Volver</a>
+                    <a href="#" id="btn-finalizar-compra" class="btn-continuar">Finalizar Compra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE COMPRA EXITOSA -->
+    <div id="modal-compra-exitosa" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon-container">
+                <div class="modal-icon-success">
+                    <span class="icon-check">✓</span>
+                </div>
+            </div>
+            <h2 class="modal-title">¡Pedido listo!</h2>
+            <p class="modal-message">Gracias por confiar en nuestra calidad.</p>
+            <div class="modal-soporte">
+                <span>¿Tienes alguna duda?</span>
+                <a href="https://wa.me/573123456789" target="_blank" class="soporte-link">
+                    Soporte
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 2px; display: inline-block; vertical-align: middle;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+            </div>
+            <a href="index.html" class="modal-btn-inicio">Volver al Inicio</a>
+        </div>
+    </div>
+
+    <script>
+        // Paso 1: Carrito -> Paso 2: Entrega
+        document.getElementById('btn-continuar-carrito').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('vista-carrito').style.display = 'none';
+            document.getElementById('vista-entrega').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Paso 2: Entrega -> Paso 1: Carrito
+        document.getElementById('btn-volver-entrega').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('vista-entrega').style.display = 'none';
+            document.getElementById('vista-carrito').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Paso 2: Entrega -> Paso 3: Pago
+        document.getElementById('btn-continuar-entrega').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('vista-entrega').style.display = 'none';
+            document.getElementById('vista-pago').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Paso 3: Pago -> Paso 2: Entrega
+        document.getElementById('btn-volver-pago').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('vista-pago').style.display = 'none';
+            document.getElementById('vista-entrega').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Paso 3: Pago -> Paso 4: Resumen
+        document.getElementById('btn-continuar-pago').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('vista-pago').style.display = 'none';
+            document.getElementById('vista-resumen').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Paso 4: Resumen -> Paso 3: Pago
+        document.getElementById('btn-volver-resumen').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('vista-resumen').style.display = 'none';
+            document.getElementById('vista-pago').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Finalizar Compra -> Mostrar Modal
+        document.getElementById('btn-finalizar-compra').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-compra-exitosa').classList.add('active');
+        });
+    </script>
+
+</body>
+</html>
