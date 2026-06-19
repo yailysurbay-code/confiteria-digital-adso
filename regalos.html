@@ -10,7 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/regalo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -32,6 +33,7 @@
                     <li class="activo"><a href="quienes-somos.html">Quienes Somos</a></li>
                     <li class="mobile-only"><a href="inicio de session.html" class="sesion">Iniciar Sesión</a></li>
                     <li class="mobile-only"><a href="registro.html" class="registro">Registro</a></li>
+
                 </ul>
             </nav>
 
@@ -283,12 +285,18 @@
         </section>
     </section>
     <hr>
-    <section class="videos-section">
-        <input type="radio" name="video-group" id="amor y amistad.mp4" checked class="video-radio">
-    </section>
-    <section class="featured-section container">
+    <section class="canasta">
+        <div class="video-canasta">
+            <video controls muted loop>
+                <source src="./assets/regalo/amor y amistad.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <!-- Tarjeta Ranking -->
+    </section>
+    <!-- SECCION RANKING -->
+    <section class="featured-section">
+
+        <!-- Banner Ranking izquierda -->
         <div class="banner">
             <img src="assets/regalo/ranquin.png" alt="Ranking">
             <div class="flechas">
@@ -297,67 +305,96 @@
             </div>
         </div>
 
-        <!-- Producto 1 -->
-        <div class="producto">
-            <img src="assets/regalo/reloj.png" alt="">
-            <h4>Reloj Rolex</h4>
-            <div class="info">
-                <span>$32.000</span>
-                <button><i class="fa-solid fa-cart-shopping"></i></button>
+        <!-- Grid productos ranking -->
+        <div class="ranking">
+
+            <div class="producto">
+                <img src="assets/regalo/reloj.png" alt="Reloj">
+                <h4>Reloj de pulsera</h4>
+                <div class="info">
+                    <span>$32.000</span>
+                    <button><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="assets/regalo/audifonos.png" alt="Audífonos">
+                <h4>Caja de audífonos</h4>
+                <div class="info">
+                    <span>$32.000</span>
+                    <button><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="assets/regalo/collar.png" alt="Miky">
+                <h4>Miky taller</h4>
+                <div class="info">
+                    <span>$32.000</span>
+                    <button><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
             </div>
         </div>
-
-        <!-- Producto 2 -->
-        <div class="producto">
-            <img src="img/audifonos.png" alt="">
-            <h4>Audífonos</h4>
-            <div class="info">
-                <span>$32.000</span>
-                <button><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-        </div>
-
-        <!-- Producto 3 -->
-        <div class="producto">
-            <img src="img/audifonos.png" alt="">
-            <h4>Audífonos</h4>
-            <div class="info">
-                <span>$32.000</span>
-                <button><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-        </div>
-
-        <!-- Producto 4 -->
-        <div class="producto">
-            <img src="img/corazon.png" alt="">
-            <h4>Caja Corazón</h4>
-            <div class="info">
-                <span>$32.000</span>
-                <button><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-        </div>
-
-        <!-- Producto 5 -->
-        <div class="producto">
-            <img src="img/corazon.png" alt="">
-            <h4>Caja Corazón</h4>
-            <div class="info">
-                <span>$32.000</span>
-                <button><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-        </div>
-
-        <!-- Producto 6 -->
-        <div class="producto">
-            <img src="img/collar.png" alt="">
-            <h4>Collar</h4>
-            <div class="info">
-                <span>$32.000</span>
-                <button><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-        </div>
-
+        
     </section>
+    <div class="contenedor-subcategorias">
+        <div class="subcategorias-scroll">
+            <a href="#" class="btn-subcategoria">Aniversario</a>
+            <a href="#" class="btn-subcategoria">madres</a>
+            <a href="#" class="btn-subcategoria">padres</a>
+            <a href="#" class="btn-subcategoria">cumpleaños</a>
+            <a href="#" class="btn-subcategoria">Variados</a>
+            <a href="#" class="btn-subcategoria">Amor y amistad</a>
+        </div>
+    </div>
+    <section class="prodc">
+
+            <div class="producto">
+                <img src="./assets/regalo/jabones.png" alt="Jabones">
+                <h3>Jabones</h3>
+                <p>$32.000</p>
+                <button >🛒</button>
+                
+            </div>
+
+            <div class="producto">
+                <img src="./assets/regalo/vela.png" alt="Vela Aromática">
+                <h3>Vela Aromática</h3>
+                <p>$30.000</p>
+                <button>🛒</button>
+            </div>
+
+            <div class="producto">
+                <img src="./assets/regalo/reloj.png" alt="Reloj Rolex">
+                <h3>Reloj Rolex</h3>
+                <p>$30.000</p>
+                <button>🛒</button>
+            </div>
+
+            <div class="producto">
+                <img src="./assets/regalo/oso.png" alt="Oso de Peluche">
+                <h3>Oso de Peluche</h3>
+                <p>$32.000</p>
+                <button >🛒</button>
+                
+            </div>
+
+            <div class="producto">
+                <img src="./assets/regalo/ramo.png" alt="Ramo de Rosas">
+                <h3>Ramo de Rosas</h3>
+                <p>$25.000</p>
+                <button>🛒</button>
+            </div>
+
+            <div class="producto">
+                <img src="./assets/regalo/caja con dijen.png" alt="Caja con Dijen">
+                <h3>Caja con Dijen</h3>
+                <p>$30.000</p>
+                <button>🛒</button>
+            </div>
+
+        </section>
+    
     <div class="main-footer">
         <div class="footer-container">
             <div class="footer-column footer-logo">

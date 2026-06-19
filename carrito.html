@@ -11,7 +11,7 @@
 <body>
 
     <header>
-
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
 
         <div class="derecha header-left">
             <div class="logo">
@@ -21,9 +21,11 @@
             <nav class="navegacion">
                 <ul>
                     <li class="activo"><a href="pedidos.html">Pedidos</a></li>
-                    <li class="activo"><a href="preferencial.html">Preferencial</a></li>
-                    <li class="activo"><a href="quienes-somos.html">Quienes Somos</a></li>
-                   
+                    <li><a href="preferencial.html">Preferencial</a></li>
+                    <li><a href="quienes-somos.html">Quienes Somos</a></li>
+                    
+                    <li class="nav-movil-only"><a href="inicio de session.html" class="sesion-movil">Iniciar Sesión</a></li>
+                    <li class="nav-movil-only"><a href="registro.html" class="registro-movil">Registro</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,20 +36,20 @@
             </a>
             <a href="inicio de session.html" class="sesion desktop-only">Iniciar Sesión</a>
             <a href="registro.html" class="registro desktop-only">Registro</a>
-            <label for="menu-toggle-checkbox" class="menu-toggle" aria-label="Abrir menú">
+            
+            <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </label>
         </div>
-
     </header>
-    <section class="categoria">
 
+    <section class="categoria">
         <a href="index.html" class="btn-categoria dulceria">Dulceria</a>
         <a href="regalos.html" class="btn-categoria regalo">Regalos</a>
     </section>
-    <!-- VISTA 1: CARRITO -->
+
     <div id="vista-carrito" class="vista-paso">
         <div class="stepper">
             <div class="step step-active">
@@ -71,7 +73,7 @@
         <div class="padre">
             <div class="hijo">
                 <h2 class="titulo-seccion">Productos del carrito</h2>
-                
+
                 <details class="acordeon-container">
                     <summary class="campo-acordeon">
                         <span class="acordeon-titulo">Productos sin oferta</span>
@@ -81,7 +83,7 @@
                         <div class="no-productos">No hay productos sin oferta en el carrito.</div>
                     </div>
                 </details>
-                
+
                 <details class="acordeon-container" open>
                     <summary class="campo-acordeon">
                         <span class="acordeon-titulo">Productos con oferta</span>
@@ -99,7 +101,7 @@
                                 <div class="radio-punto"></div>
                             </div>
                         </div>
-                        
+
                         <div class="producto">
                             <div class="prod">
                                 <img src="assets/carrito/vela.png" alt="Vela aromática">
@@ -111,7 +113,7 @@
                                 <div class="radio-punto"></div>
                             </div>
                         </div>
-                        
+
                         <div class="producto">
                             <div class="prod">
                                 <img src="assets/carrito/jabones.png" alt="Jabones">
@@ -121,7 +123,7 @@
                             </div>
                             <div class="radio-button"></div>
                         </div>
-                        
+
                         <div class="agregar">
                             <div class="agregar-icono">+</div>
                             <span class="agregar-texto">Agregar más productos</span>
@@ -135,27 +137,27 @@
                     <span class="descuento-label">Código de descuento</span>
                     <a href="#" class="descuento-link">Añadir código</a>
                 </div>
-                
+
                 <h3 class="pagos-titulo">Detalles de pago</h3>
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos">
                     <span class="pago-label">Valor artículos</span>
                     <span class="pago-valor">$666.000</span>
                 </div>
-                
+
                 <div class="grupos">
                     <span class="pago-label">Envío</span>
                     <span class="pago-valor">-</span>
                 </div>
-                
+
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos total-grupo">
                     <span class="total-label">Total</span>
                     <span class="total-valor">$666.000</span>
                 </div>
-                
+
                 <div class="grupos direccion-grupo">
                     <span class="direccion-label">Dirección</span>
                     <div class="direccion-valor">
@@ -163,7 +165,7 @@
                         <span class="chevron chevron-abajo-pequeno"></span>
                     </div>
                 </div>
-                
+
                 <div class="botones-container">
                     <a href="pedidos.html" class="btn-volver">Volver</a>
                     <a href="#" id="btn-continuar-carrito" class="btn-continuar">Continuar</a>
@@ -172,7 +174,6 @@
         </div>
     </div>
 
-    <!-- VISTA 2: ENTREGA -->
     <div id="vista-entrega" class="vista-paso" style="display: none;">
         <div class="stepper">
             <div class="step step-completed">
@@ -196,7 +197,7 @@
         <div class="padre">
             <div class="hijo">
                 <h2 class="titulo-seccion">Datos de entrega</h2>
-                
+
                 <details class="acordeon-container">
                     <summary class="campo-acordeon">
                         <span class="acordeon-titulo">Datos básicos</span>
@@ -207,19 +208,19 @@
                             <label class="input-label">Nombre completo</label>
                             <input type="text" class="input-control" value="Yailys Urbay" placeholder="Nombre completo">
                         </div>
-                        
+
                         <div class="campo-input">
                             <label class="input-label">Correo electrónico</label>
                             <input type="email" class="input-control" value="yailysurbay@gmail.com" placeholder="Correo electrónico">
                         </div>
-                        
+
                         <div class="campo-input">
                             <label class="input-label">Teléfono</label>
                             <input type="tel" class="input-control" value="312 345 6789" placeholder="Ingresa tu número de teléfono">
                         </div>
                     </div>
                 </details>
-                
+
                 <details class="acordeon-container" open>
                     <summary class="campo-acordeon">
                         <span class="acordeon-titulo">Datos de domicilio</span>
@@ -227,7 +228,7 @@
                     </summary>
                     <div class="acordeon-contenido">
                         <h4 class="subtitulo-datos">Datos de la dirección</h4>
-                        
+
                         <div class="direcciones-chips">
                             <div class="direccion-chip chip-activo">
                                 <div class="chip-radio">
@@ -235,14 +236,14 @@
                                 </div>
                                 <span>Calle 15</span>
                             </div>
-                            
+
                             <div class="direccion-chip chip-activo">
                                 <div class="chip-radio">
                                     <span class="chip-check">✓</span>
                                 </div>
                                 <span>Nro. Cruce 6</span>
                             </div>
-                            
+
                             <div class="direccion-chip chip-activo">
                                 <div class="chip-radio">
                                     <span class="chip-check">✓</span>
@@ -250,12 +251,12 @@
                                 <span>Nro. Residencia 81</span>
                             </div>
                         </div>
-                        
+
                         <div class="informacion-adicional-bar">
                             <div class="chip-radio"></div>
                             <span>Información adicional</span>
                         </div>
-                        
+
                         <div class="agregar">
                             <div class="agregar-icono">+</div>
                             <span class="agregar-texto">Agregar más direcciones</span>
@@ -269,27 +270,27 @@
                     <span class="descuento-label">Código de descuento</span>
                     <a href="#" class="descuento-link">Añadir código</a>
                 </div>
-                
+
                 <h3 class="pagos-titulo">Detalles de pago</h3>
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos">
                     <span class="pago-label">Valor artículos</span>
                     <span class="pago-valor">$666.000</span>
                 </div>
-                
+
                 <div class="grupos">
                     <span class="pago-label">Envío</span>
                     <span class="pago-valor">-</span>
                 </div>
-                
+
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos total-grupo">
                     <span class="total-label">Total</span>
                     <span class="total-valor">$666.000</span>
                 </div>
-                
+
                 <div class="grupos direccion-grupo">
                     <span class="direccion-label">Dirección</span>
                     <div class="direccion-valor">
@@ -297,7 +298,7 @@
                         <span class="chevron chevron-abajo-pequeno"></span>
                     </div>
                 </div>
-                
+
                 <div class="botones-container">
                     <a href="#" id="btn-volver-entrega" class="btn-volver">Volver</a>
                     <a href="#" id="btn-continuar-entrega" class="btn-continuar">Continuar</a>
@@ -306,7 +307,6 @@
         </div>
     </div>
 
-    <!-- VISTA 3: PAGO -->
     <div id="vista-pago" class="vista-paso" style="display: none;">
         <div class="stepper">
             <div class="step step-completed">
@@ -330,7 +330,7 @@
         <div class="padre">
             <div class="hijo">
                 <h2 class="titulo-seccion">Métodos de pago</h2>
-                
+
                 <details class="acordeon-container">
                     <summary class="campo-acordeon">
                         <span class="acordeon-titulo">PSE</span>
@@ -355,7 +355,7 @@
                         </div>
                     </div>
                 </details>
-                
+
                 <details class="acordeon-container" open>
                     <summary class="campo-acordeon">
                         <span class="acordeon-titulo">Tarjeta débito/crédito</span>
@@ -372,7 +372,7 @@
                                 <div class="radio-punto"></div>
                             </div>
                         </div>
-                        
+
                         <div class="producto">
                             <div class="prod">
                                 <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
@@ -381,14 +381,14 @@
                             </div>
                             <div class="radio-button"></div>
                         </div>
-                        
+
                         <div class="agregar">
                             <div class="agregar-icono">+</div>
                             <span class="agregar-texto">Agregar nuevas tarjetas</span>
                         </div>
                     </div>
                 </details>
-                
+
                 <div class="agregar-metodo-completo">
                     <div class="agregar-icono">+</div>
                     <span class="agregar-texto">Agregar método de pago</span>
@@ -400,27 +400,27 @@
                     <span class="descuento-label">Código de descuento</span>
                     <a href="#" class="descuento-link">Añadir código</a>
                 </div>
-                
+
                 <h3 class="pagos-titulo">Detalles de pago</h3>
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos">
                     <span class="pago-label">Valor artículos</span>
                     <span class="pago-valor">$666.000</span>
                 </div>
-                
+
                 <div class="grupos">
                     <span class="pago-label">Envío</span>
                     <span class="pago-valor">$15.000</span>
                 </div>
-                
+
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos total-grupo">
                     <span class="total-label">Total</span>
                     <span class="total-valor">$681.000</span>
                 </div>
-                
+
                 <div class="grupos direccion-grupo">
                     <span class="direccion-label">Dirección</span>
                     <div class="direccion-valor">
@@ -428,7 +428,7 @@
                         <span class="chevron chevron-abajo-pequeno"></span>
                     </div>
                 </div>
-                
+
                 <div class="botones-container">
                     <a href="#" id="btn-volver-pago" class="btn-volver">Volver</a>
                     <a href="#" id="btn-continuar-pago" class="btn-continuar">Continuar</a>
@@ -437,7 +437,6 @@
         </div>
     </div>
 
-    <!-- VISTA 4: RESUMEN -->
     <div id="vista-resumen" class="vista-paso" style="display: none;">
         <div class="stepper">
             <div class="step step-completed">
@@ -461,7 +460,7 @@
         <div class="padre">
             <div class="hijo">
                 <h2 class="titulo-seccion">Resumen de compra</h2>
-                
+
                 <details class="acordeon-container" open>
                     <summary class="campo-acordeon">
                         <span class="acordeon-titulo">Revisar productos</span>
@@ -534,27 +533,27 @@
                     <span class="descuento-label">Código de descuento</span>
                     <a href="#" class="descuento-link">Añadir código</a>
                 </div>
-                
+
                 <h3 class="pagos-titulo">Detalles de pago</h3>
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos">
                     <span class="pago-label">Valor artículos</span>
                     <span class="pago-valor">$666.000</span>
                 </div>
-                
+
                 <div class="grupos">
                     <span class="pago-label">Envío</span>
                     <span class="pago-valor">$15.000</span>
                 </div>
-                
+
                 <hr class="pagos-divisor">
-                
+
                 <div class="grupos total-grupo">
                     <span class="total-label">Total</span>
                     <span class="total-valor">$681.000</span>
                 </div>
-                
+
                 <div class="grupos direccion-grupo">
                     <span class="direccion-label">Dirección</span>
                     <div class="direccion-valor">
@@ -562,7 +561,7 @@
                         <span class="chevron chevron-abajo-pequeno"></span>
                     </div>
                 </div>
-                
+
                 <div class="botones-container">
                     <a href="#" id="btn-volver-resumen" class="btn-volver">Volver</a>
                     <a href="#" id="btn-finalizar-compra" class="btn-continuar">Finalizar Compra</a>
@@ -571,7 +570,6 @@
         </div>
     </div>
 
-    <!-- MODAL DE COMPRA EXITOSA -->
     <div id="modal-compra-exitosa" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-icon-container">
@@ -585,7 +583,13 @@
                 <span>¿Tienes alguna duda?</span>
                 <a href="https://wa.me/573123456789" target="_blank" class="soporte-link">
                     Soporte
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 2px; display: inline-block; vertical-align: middle;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="margin-left: 2px; display: inline-block; vertical-align: middle;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
                 </a>
             </div>
             <a href="index.html" class="modal-btn-inicio">Volver al Inicio</a>
@@ -594,7 +598,7 @@
 
     <script>
         // Paso 1: Carrito -> Paso 2: Entrega
-        document.getElementById('btn-continuar-carrito').addEventListener('click', function(e) {
+        document.getElementById('btn-continuar-carrito').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('vista-carrito').style.display = 'none';
             document.getElementById('vista-entrega').style.display = 'block';
@@ -602,7 +606,7 @@
         });
 
         // Paso 2: Entrega -> Paso 1: Carrito
-        document.getElementById('btn-volver-entrega').addEventListener('click', function(e) {
+        document.getElementById('btn-volver-entrega').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('vista-entrega').style.display = 'none';
             document.getElementById('vista-carrito').style.display = 'block';
@@ -610,7 +614,7 @@
         });
 
         // Paso 2: Entrega -> Paso 3: Pago
-        document.getElementById('btn-continuar-entrega').addEventListener('click', function(e) {
+        document.getElementById('btn-continuar-entrega').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('vista-entrega').style.display = 'none';
             document.getElementById('vista-pago').style.display = 'block';
@@ -618,7 +622,7 @@
         });
 
         // Paso 3: Pago -> Paso 2: Entrega
-        document.getElementById('btn-volver-pago').addEventListener('click', function(e) {
+        document.getElementById('btn-volver-pago').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('vista-pago').style.display = 'none';
             document.getElementById('vista-entrega').style.display = 'block';
@@ -626,7 +630,7 @@
         });
 
         // Paso 3: Pago -> Paso 4: Resumen
-        document.getElementById('btn-continuar-pago').addEventListener('click', function(e) {
+        document.getElementById('btn-continuar-pago').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('vista-pago').style.display = 'none';
             document.getElementById('vista-resumen').style.display = 'block';
@@ -634,7 +638,7 @@
         });
 
         // Paso 4: Resumen -> Paso 3: Pago
-        document.getElementById('btn-volver-resumen').addEventListener('click', function(e) {
+        document.getElementById('btn-volver-resumen').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('vista-resumen').style.display = 'none';
             document.getElementById('vista-pago').style.display = 'block';
@@ -642,11 +646,12 @@
         });
 
         // Finalizar Compra -> Mostrar Modal
-        document.getElementById('btn-finalizar-compra').addEventListener('click', function(e) {
+        document.getElementById('btn-finalizar-compra').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('modal-compra-exitosa').classList.add('active');
         });
     </script>
 
 </body>
+
 </html>
